@@ -47,9 +47,7 @@ public static String getTeams() {
 
 	public static String parse(String responseBody) {
 		JSONArray teams = new JSONArray(responseBody);
-		
-		
-		
+			
 		for(int i = 0; i < teams.length(); i++) {
 			JSONObject team = teams.getJSONObject(i);
 			int id = team.getInt("TeamID");
@@ -57,8 +55,11 @@ public static String getTeams() {
 			String city = team.getString("City");
 			String coach = team.getString("HeadCoach");
 			String division = team.getString("Conference");
+			String primaryColor = team.getString("PrimaryColor");
+			String logoUrl = team.getString("WikipediaLogoUrl");
 			
-			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' + "Conference: " + division);
+			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl);
 			System.out.println("--------------------");
 						
 //			return name;
