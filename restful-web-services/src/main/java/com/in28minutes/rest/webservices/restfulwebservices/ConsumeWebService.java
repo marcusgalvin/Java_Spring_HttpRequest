@@ -1,4 +1,7 @@
 package com.in28minutes.rest.webservices.restfulwebservices;
+import com.in28minutes.rest.webservices.restfulwebservices.Message;
+
+
 
 import java.awt.PageAttributes.MediaType;
 import java.net.URI;
@@ -20,6 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,6 +34,13 @@ public class ConsumeWebService {
 	
 	@Autowired
 	   RestTemplate restTemplate;
+	
+	
+//test
+	@RequestMapping("/greeting")
+    public Message greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Message(name);
+    }
 	
 
 //get teams from api endpoint	
@@ -62,7 +73,8 @@ public static String getTeams() {
 					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl);
 			System.out.println("--------------------");
 						
-//			return name;
+//			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
 		}
 		return responseBody;
 		
