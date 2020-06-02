@@ -68,13 +68,16 @@ public static String getTeams() {
 			String division = team.getString("Conference");
 			String primaryColor = team.getString("PrimaryColor");
 			String logoUrl = team.getString("WikipediaLogoUrl");
-			
-			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
-					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl);
-			System.out.println("--------------------");
+//		
+//			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl
+//					);
+//			System.out.println("--------------------");
 						
-//			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
-//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
+			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
+			
+			
 		}
 		return responseBody;
 		
@@ -106,7 +109,7 @@ public static String getTeams() {
 				int playerId = player.getInt("PlayerID");
 				String firstName = player.getString("FirstName");
 				String LastName = player.getString("LastName");
-				String position = player.getString("Position");
+//				String position = player.getString("Position");
 				
 //				return firstName;
 				
