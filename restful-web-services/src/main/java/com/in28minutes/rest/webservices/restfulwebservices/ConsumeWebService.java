@@ -69,13 +69,13 @@ public static String getTeams() {
 			String primaryColor = team.getString("PrimaryColor");
 			String logoUrl = team.getString("WikipediaLogoUrl");
 //		
-//			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
-//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl
-//					);
-//			System.out.println("--------------------");
+			System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl
+					);
+			System.out.println("--------------------");
 						
-			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
-					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
+//			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
+//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
 			
 			
 		}
