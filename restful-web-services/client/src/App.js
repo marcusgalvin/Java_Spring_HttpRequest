@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
 import AtlantaFalcons from "./components/allTeams/AtlantaFalcons";
+import PlayerCompare from "./components/allPlayers/PlayerCompare";
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -15,6 +16,7 @@ export default class App extends React.Component {
       <Router>
     
         <div>
+         
           
         <div className="AtlantaFalcons">
           <Link to="/AtlantaFalcons">
@@ -33,6 +35,15 @@ export default class App extends React.Component {
             
             </Link>
         </div>
+
+        <div className="PlayerCompare">
+          <Link to="/PlayerCompare">
+            <button className="PlayerCompareButton">
+            PlayerCompare
+            </button>
+            </Link>
+        </div>
+
           
 
           <Switch>
@@ -43,7 +54,10 @@ export default class App extends React.Component {
 
           <Route path="/AtlantaFalcons">
           <AtlantaFalcons/> 
+          </Route>
 
+          <Route path="/PlayerCompare">
+          <PlayerCompare/>
           </Route>
 
 
