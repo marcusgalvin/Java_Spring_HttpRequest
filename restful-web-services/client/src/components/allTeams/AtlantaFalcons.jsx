@@ -28,12 +28,15 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div>
-          <div>{this.state.team.City}</div>
-          <div>{this.state.team.Name}</div>
-          <div>{this.state.team.HeadCoach}</div>
-          <div>{this.state.team.Conference}</div>
-          <div>{this.state.team.PrimaryColor}</div>
-          <div>{this.state.team.WikipediaLogoUrl}</div>
+			<div className="Banner">
+				</div>
+		
+		<div className="teamInfo">		
+          <p>{this.state.team.City} {this.state.team.Name}</p>		  
+          <p>Head Coach: {this.state.team.HeadCoach}</p>
+          <p>Conference: {this.state.team.Conference}</p>
+          <p>Team Color: {this.state.team.PrimaryColor}</p>
+		</div>
 
 
           </div>

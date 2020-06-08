@@ -28,14 +28,14 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div>
-          <button>
+          <button onClick="componentDidMount()"></button>
           <div>{this.state.team.City}</div>
           <div>{this.state.team.Name}</div>
           <div>{this.state.team.HeadCoach}</div>
           <div>{this.state.team.Conference}</div>
           <div>{this.state.team.PrimaryColor}</div>
           <div>{this.state.team.WikipediaLogoUrl}</div>
-          </button>
+          
 
           </div>
       )}

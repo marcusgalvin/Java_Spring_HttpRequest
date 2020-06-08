@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.falconsButton {
+  width: 110px;
+  height:105px;
+  background-image: url("https://media-exp1.licdn.com/dms/image/C560BAQECGGTLKQC1sQ/company-logo_100_100/0?e=2159024400&v=beta&t=LEc4KT-hJQRVd-mIy7ANXHl8SfedQ7Fk4GyCdmN1ciU");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cardinalsButton {
+  width: 110px;
+  height:105px;
+  background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ari.png&w=100&h=100&transparent=true");
+}
+
+/* Banners for team pages */
+.Banner{
+  margin:auto;
+  width:500px;
+  height: 200px;
+  background-image: url("https://nhrdez.files.wordpress.com/2013/05/atlanta_falcons.jpg?w=640");
 }

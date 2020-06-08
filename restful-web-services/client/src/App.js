@@ -1,4 +1,5 @@
 import React from "react";
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
 import AtlantaFalcons from "./components/allTeams/AtlantaFalcons";
 
@@ -11,18 +12,48 @@ export default class App extends React.Component {
 
   render(){
     return (
-    <div>
+      <Router>
+    
         <div>
-          <p>Teams:</p>
+          
+        <div className="AtlantaFalcons">
+          <Link to="/AtlantaFalcons">
+            <button className="falconsButton">
+            {/* Arizona Cardinals */}
+            </button>
+            </Link>
+        </div>
+
+        <br />
+        <div className="ArizonaCardinals">
+          <Link to="/ArizonaCardinals">
+            <button className="cardinalsButton">
+              {/* ArizonaCardinals */}
+            </button>
+            
+            </Link>
+        </div>
+          
+
+          <Switch>
+
+          <Route exact path="/ArizonaCardinals">
           <ArizonaCardinals/>
-          <br />
-          <AtlantaFalcons/>
+          </Route>
+
+          <Route path="/AtlantaFalcons">
+          <AtlantaFalcons/> 
+
+          </Route>
 
 
-          </div>
-      )}
-      </div>
+          </Switch>
+
+          </div>     
+      
+      </Router>
     );    
   }
 }
+
 
