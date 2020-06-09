@@ -1,8 +1,9 @@
 import React from "react";
+import BillsNews from "./TeamNews/BillsNews";
 // import logo from './logo.svg';
 // import './App.css';
 
-export default class ArizonaCardinals extends React.Component {
+export default class BuffaloBills extends React.Component {
 
   state = {
     loading: true,
@@ -16,7 +17,9 @@ async componentDidMount(){
   const data = await response.json();
   console.log(data);
 
-  this.setState({ team: data[0], loading: false});
+  
+
+  this.setState({ team: data[3], loading: false});
 
 
 }
@@ -28,15 +31,27 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div>
-
-          <div className="Banner">
+			<div className="billsBanner">
 				</div>
-          <div className="teamInfo">		
+		
+		<div className="billsContainer">
+
+
+		<div className="billsTeamInfo">		
           <p>{this.state.team.City} {this.state.team.Name}</p>		  
           <p>Head Coach: {this.state.team.HeadCoach}</p>
           <p>Conference: {this.state.team.Conference}</p>
           <p>Team Color: {this.state.team.PrimaryColor}</p>
 		</div>
+
+		<div className="teamFeed">
+			<p>team feed</p>
+			<BillsNews/>
+
+		</div>
+
+		</div>
+
 
           </div>
       )}

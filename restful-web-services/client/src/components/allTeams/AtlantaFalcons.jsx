@@ -28,15 +28,25 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div>
-			<div className="Banner">
+			<div className="falconsBanner">
 				</div>
+
+        		<div className="billsContainer">
+
 		
-		<div className="teamInfo">		
+		<div className="falconsTeamInfo">		
           <p>{this.state.team.City} {this.state.team.Name}</p>		  
           <p>Head Coach: {this.state.team.HeadCoach}</p>
           <p>Conference: {this.state.team.Conference}</p>
           <p>Team Color: {this.state.team.PrimaryColor}</p>
 		</div>
+
+    <div className="teamFeed">
+			<p>team feed</p>
+			<p>comming soon...</p>
+
+		</div>
+    </div>
 
 
           </div>

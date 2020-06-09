@@ -119,6 +119,40 @@ public static String getTeams() {
 			
 		}
 		
+		
+//bills player info
+		@GetMapping(path="/billsNews")
+		public static String getBillsNews() {
+				
+				HttpClient client = HttpClient.newHttpClient();
+				HttpRequest request = HttpRequest.newBuilder()
+						.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/BUF?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+				return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+						.thenApply(HttpResponse::body)
+						.thenApply(ConsumeWebService::parseBillsNews)
+						.join();
+
+
+			}
+
+			public static String parseBillsNews(String responseBody) {
+				JSONArray billsNews = new JSONArray(responseBody);
+				
+							
+				for(int i = 0; i < billsNews.length(); i++) {
+					JSONObject player = billsNews.getJSONObject(i);
+//					int playerId = player.getInt("PlayerID");
+//					String firstName = player.getString("FirstName");
+//					String LastName = player.getString("LastName");
+//					String position = player.getString("Position");
+					
+//					return firstName;
+					
+
+				}
+				return responseBody;
+				
+			}
 	
 	
 	

@@ -2,6 +2,8 @@ import React from "react";
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
 import AtlantaFalcons from "./components/allTeams/AtlantaFalcons";
+import BuffaloBills from "./components/allTeams/BuffaloBills";
+
 import PlayerCompare from "./components/allPlayers/PlayerCompare";
 
 // import logo from './logo.svg';
@@ -31,10 +33,19 @@ export default class App extends React.Component {
           <Link to="/ArizonaCardinals">
             <button className="cardinalsButton">
               {/* ArizonaCardinals */}
-            </button>
-            
+            </button>            
             </Link>
         </div>
+
+         <br />
+        <div className="BuffaloBills">
+          <Link to="/BuffaloBills">
+            <button className="billsButton">
+              {/* ArizonaCardinals */}
+            </button>            
+            </Link>
+        </div>
+
 
         <div className="PlayerCompare">
           <Link to="/PlayerCompare">
@@ -54,6 +65,10 @@ export default class App extends React.Component {
 
           <Route path="/AtlantaFalcons">
           <AtlantaFalcons/> 
+          </Route>
+
+          <Route path="/BuffaloBills">
+          <BuffaloBills/> 
           </Route>
 
           <Route path="/PlayerCompare">
