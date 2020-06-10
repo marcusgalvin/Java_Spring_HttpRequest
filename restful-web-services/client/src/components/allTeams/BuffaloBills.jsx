@@ -1,5 +1,7 @@
 import React from "react";
 import BillsNews from "./TeamNews/BillsNews";
+import BillsDefStats from "./allTeamsDefStats/BillsDefStats";
+import BillsOffStats from "./allTeamsOffStats/BillsOffStats";
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -30,7 +32,7 @@ async componentDidMount(){
       {this.state.loading || !this.state.team ? (
         <div>loading...</div>
       ) : (
-        <div>
+        <div className="billFullPage">
 			<div className="billsBanner">
 				</div>
 		
@@ -41,14 +43,30 @@ async componentDidMount(){
           <p>{this.state.team.City} {this.state.team.Name}</p>		  
           <p>Head Coach: {this.state.team.HeadCoach}</p>
           <p>Conference: {this.state.team.Conference}</p>
-          <p>Team Color: {this.state.team.PrimaryColor}</p>
+          Team Color: <div className="teamColor"></div>
 		</div>
+
+<div className="feedsContainer">
 
 		<div className="teamFeed">
-			<p>team feed</p>
+			<p>Team News Feed</p>
 			<BillsNews/>
-
+			
 		</div>
+
+		<div className="defStats">
+			<p>Defensive Stats:</p>
+			<BillsDefStats/>
+
+			</div>
+
+<div className="defStats">
+			<p>Offensive Stats:</p>
+			<BillsOffStats/>
+
+			</div>
+
+			</div>
 
 		</div>
 

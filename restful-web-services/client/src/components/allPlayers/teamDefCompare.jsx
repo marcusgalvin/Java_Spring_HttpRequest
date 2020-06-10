@@ -2,7 +2,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 
-export default class BillsNews extends React.Component {
+export default class playerCompare extends React.Component {
 
   state = {
     loading: true,
@@ -11,17 +11,16 @@ export default class BillsNews extends React.Component {
   }
 
 async componentDidMount(){
-  const url = "http://localhost:8080/billsNews";
+  const url = "http://localhost:8080/players";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
-
-  
 
   this.setState({ team: data[0], loading: false});
 
 
 }
+
 
   render(){
     return (
@@ -31,21 +30,13 @@ async componentDidMount(){
       ) : (
         <div>
 			
-
-		<div className="billsNews">		
-          <p>{this.state.team.Title}</p>
-		  <p>{this.state.team.Content}</p>
-          <p>Date: {this.state.team.TimeAgo}</p>
-          <p>Source: {this.state.team.Source}</p>
-
-		  
-
+		
+		<div className="teamInfo">		
+          <p>Name: {this.state.team.FirstName} {this.state.team.LastName}</p>		  
           
+          <p>Position: {this.state.team.Position}</p>
+          <p>Team: {this.state.team.Team}</p>
 		</div>
-
-		
-
-		
 
 
           </div>

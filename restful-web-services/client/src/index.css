@@ -24,6 +24,17 @@
   background-image: url("https://nhrdez.files.wordpress.com/2013/05/atlanta_falcons.jpg?w=640");
 }
 
+.teamColor{
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+}
+
+.billsFullPage{
+  display: flex;
+  flex-direction: center;
+}
+
 .billsBanner{
   margin:auto;
   width:500px;
@@ -31,17 +42,19 @@
   background-image: url("https://i.pinimg.com/originals/aa/d2/d2/aad2d2d6e9198ea496ac9f64fd069a0a.jpg");
 }
 
-.billsContainer{
-  display: flex;
-  flex-direction: center;
-}
 
-.billsTeamInfo{
-  margin: 40px;;
+
+.allTeamInfo{
+  margin: auto;;
 }
 
 .falconsTeamInfo{
   margin: 40px;;
+}
+
+.feedsContainer{
+  display: flex;
+  flex-direction: center;
 }
 
 .teamFeed{
@@ -51,4 +64,13 @@
   border-color: black;
   border-width: 1px;
   float: center;
+}
+
+.defStats{
+  width:600px;
+  height: 500px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  float: right;
 }

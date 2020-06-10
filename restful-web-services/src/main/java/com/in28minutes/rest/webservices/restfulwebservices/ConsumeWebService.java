@@ -154,10 +154,74 @@ public static String getTeams() {
 				
 			}
 	
-	
-	
-	
-	
+
+//bills defense stats
+			@GetMapping(path="/billsDefStats")
+			public static String getBillsDefStats() {
+					
+					HttpClient client = HttpClient.newHttpClient();
+					HttpRequest request = HttpRequest.newBuilder()
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/BUF?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+							.thenApply(HttpResponse::body)
+//							.thenApply(ConsumeWebService::parseBillsDefStats)
+							.join();
+
+
+				}
+			
+			
+			//falcons defense stats
+			@GetMapping(path="/falconsDefStats")
+			public static String getFalconsDefStats() {
+					
+					HttpClient client = HttpClient.newHttpClient();
+					HttpRequest request = HttpRequest.newBuilder()
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/ATL?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+							.thenApply(HttpResponse::body)
+//							.thenApply(ConsumeWebService::parseBillsDefStats)
+							.join();
+
+
+				}
+			
+			
+			
+//teams offense stats
+			
+			@GetMapping(path="/allTeamsOffStats")
+			public static String getBillsOffStats() {
+					
+					HttpClient client = HttpClient.newHttpClient();
+					HttpRequest request = HttpRequest.newBuilder()
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/TeamSeasonStats/2019?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+							.thenApply(HttpResponse::body)
+							.join();
+
+
+				}
+			
+			
+
+
+//falcons team news api
+			
+			
+			@GetMapping(path="/falconsNews")
+			public static String getFalconsNews() {
+					
+					HttpClient client = HttpClient.newHttpClient();
+					HttpRequest request = HttpRequest.newBuilder()
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/ATL?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+							.thenApply(HttpResponse::body)
+							.join();
+
+
+				}
+			
 
     
 	

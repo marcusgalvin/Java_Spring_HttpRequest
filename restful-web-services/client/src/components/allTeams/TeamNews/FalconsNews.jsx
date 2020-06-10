@@ -2,7 +2,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 
-export default class BillsNews extends React.Component {
+export default class FalconsNews extends React.Component {
 
   state = {
     loading: true,
@@ -11,7 +11,7 @@ export default class BillsNews extends React.Component {
   }
 
 async componentDidMount(){
-  const url = "http://localhost:8080/billsNews";
+  const url = "http://localhost:8080/falconsNews";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
