@@ -40,7 +40,7 @@ async componentDidMount(){
 
 
 		<div className="billsTeamInfo">		
-          <p>{this.state.team.City} {this.state.team.Name}</p>		  
+          <h3>{this.state.team.City} {this.state.team.Name}</h3>		  
           <p>Head Coach: {this.state.team.HeadCoach}</p>
           <p>Conference: {this.state.team.Conference}</p>
           Team Color: <div className="teamColor"></div>

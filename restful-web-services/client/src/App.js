@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
 import AtlantaFalcons from "./components/allTeams/AtlantaFalcons";
 import BuffaloBills from "./components/allTeams/BuffaloBills";
+import NewEnglandPatriots from "./components/allTeams/NewEnglandPatriots";
 
 import PlayerCompare from "./components/allPlayers/PlayerCompare";
 
@@ -17,7 +18,7 @@ export default class App extends React.Component {
     return (
       <Router>
     
-        <div>
+        <div className="teamIcons">
          
           
         <div className="AtlantaFalcons">
@@ -29,32 +30,47 @@ export default class App extends React.Component {
         </div>
 
         <br />
+        <div className="break"></div>
+        
         <div className="ArizonaCardinals">
           <Link to="/ArizonaCardinals">
             <button className="cardinalsButton">
-              {/* ArizonaCardinals */}
             </button>            
             </Link>
         </div>
 
          <br />
+        <div className="break"></div>
+
         <div className="BuffaloBills">
           <Link to="/BuffaloBills">
             <button className="billsButton">
-              {/* ArizonaCardinals */}
             </button>            
             </Link>
         </div>
 
+        <div className="break"></div>
 
-        <div className="PlayerCompare">
+       
+
+        <div className="teamIconRowTwo">
+
+          <Link to="/NewEnglandPatriots">
+            <button className="patsButton">
+            </button>
+          </Link>
+        </div>
+
+                <div className="break"></div>
+
+
+ <div className="PlayerCompare">
           <Link to="/PlayerCompare">
             <button className="PlayerCompareButton">
-            PlayerCompare
+            TeamCompare
             </button>
             </Link>
         </div>
-
           
 
           <Switch>
@@ -71,9 +87,15 @@ export default class App extends React.Component {
           <BuffaloBills/> 
           </Route>
 
+          <Route path="/NewEnglandPatriots">
+            <NewEnglandPatriots/>
+          </Route>
+
           <Route path="/PlayerCompare">
           <PlayerCompare/>
           </Route>
+
+          
 
 
           </Switch>

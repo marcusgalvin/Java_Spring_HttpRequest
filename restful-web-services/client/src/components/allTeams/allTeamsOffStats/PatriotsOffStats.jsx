@@ -2,7 +2,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 
-export default class FalconsOffStats extends React.Component {
+export default class PatriotsOffStats extends React.Component {
 
   state = {
     loading: true,
@@ -16,7 +16,13 @@ async componentDidMount(){
   const data = await response.json();
   console.log(data);
 
-  this.setState({ team: data[10], loading: false});
+  
+
+  this.setState({ team: data[21], loading: false});
+
+  
+
+
 }
 
   render(){

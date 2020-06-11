@@ -1,11 +1,11 @@
 import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
-import FalconsNews from "./TeamNews/FalconsNews";
-import FalconsDefStats from "./allTeamsDefStats/FalconsDefStats";
-import FalconsOffStats from "./allTeamsOffStats/FalconsOffStats";
+import PatriotsNews from "./TeamNews/PatriotsNews";
+import PatriotsDefStats from "./allTeamsDefStats/PatriotsDefStats";
+import PatriotsOffStats from "./allTeamsOffStats/PatriotsOffStats";
 
-export default class ArizonaCardinals extends React.Component {
+export default class NewEnglandPatriots extends React.Component {
 
   state = {
     loading: true,
@@ -19,7 +19,7 @@ async componentDidMount(){
   const data = await response.json();
   console.log(data);
 
-  this.setState({ team: data[1], loading: false});
+  this.setState({ team: data[21], loading: false});
 
 
 }
@@ -31,7 +31,7 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div className="billFullPage">
-			<div className="falconsBanner">
+			<div className="patsBanner">
 				</div>
 		
 		<div className="billsContainer">
@@ -41,25 +41,25 @@ async componentDidMount(){
           <h3>{this.state.team.City} {this.state.team.Name}</h3>		  
           <p>Head Coach: {this.state.team.HeadCoach}</p>
           <p>Conference: {this.state.team.Conference}</p>
-          Team Color: <div className="falconsColor"></div>
+          Team Color: <div className="teamColor"></div>
 		</div>
 
 <div className="feedsContainer">
 
 		<div className="teamFeed">
 			<p>Team News Feed</p>
-			<FalconsNews/>
+			<PatriotsNews/>
 			
 		</div>
 
 		<div className="defStats">
 			<p>Defensive Stats:</p>
-        <FalconsDefStats/>
+        <PatriotsDefStats/>
 			</div>
 
 <div className="defStats">
 			<p>Offensive Stats:</p>
-			<FalconsOffStats/>
+			<PatriotsOffStats/>
 
 			</div>
 

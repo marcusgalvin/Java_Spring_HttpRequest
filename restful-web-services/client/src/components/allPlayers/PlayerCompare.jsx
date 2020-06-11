@@ -6,20 +6,42 @@ export default class playerCompare extends React.Component {
 
   state = {
     loading: true,
-    team : null
+    team : null,
+    
     
   }
 
+
 async componentDidMount(){
-  const url = "http://localhost:8080/players";
+  const url = "http://localhost:8080/allTeamsDefStats";
   const response = await fetch(url);
-  const data = await response.json();
+   var data = await response.json();
   console.log(data);
 
-  this.setState({ team: data[0], loading: false});
+  this.setState({ team: data, loading: false});
+
+  console.log(data[0].PointsAllowed);
+  console.log(data[1].PointsAllowed);
+
+  var ArizonaCardinals = data[0];
+  var AtlantaFalcons = data[1];
+
+  //points allowed
+  if(ArizonaCardinals.PointsAllowed > AtlantaFalcons.PointsAllowed){
+    console.log(ArizonaCardinals.Team + " has allowed more points scored than " + AtlantaFalcons.Team)
+  } else if(ArizonaCardinals.PointsAllowed < AtlantaFalcons.PointsAllowed) {
+    console.log(AtlantaFalcons + " have allowed more points scored than " + ArizonaCardinals.Team)
+  }
+  
+  }
+
+  
 
 
-}
+
+
+
+
 
 
   render(){
@@ -31,12 +53,16 @@ async componentDidMount(){
         <div>
 			
 		
-		<div className="teamInfo">		
-          <p>Name: {this.state.team.FirstName} {this.state.team.LastName}</p>		  
-          
-          <p>Position: {this.state.team.Position}</p>
-          <p>Team: {this.state.team.Team}</p>
+		<div className="billsDefStats">		
+          {/* <p>Points Allowed: {this.state.team.data[0]}</p> */}
+		
+         
 		</div>
+
+    <div>
+      {/* <FalconsDefStats/> */}
+    </div>
+
 
 
           </div>

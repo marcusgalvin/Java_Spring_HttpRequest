@@ -1,3 +1,4 @@
+/* button icons */
 .falconsButton {
   width: 110px;
   height:105px;
@@ -16,6 +17,14 @@
   background-image: url("https://static.www.nfl.com/image/private/t_thumb_squared/f_auto/league/giphcy6ie9mxbnldntsf");
 }
 
+.patsButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ne.png&w=100&h=100&transparent=true");
+}
+
+
+
 /* Banners for team pages */
 .falconsBanner{
   margin:auto;
@@ -24,10 +33,23 @@
   background-image: url("https://nhrdez.files.wordpress.com/2013/05/atlanta_falcons.jpg?w=640");
 }
 
+.patsBanner{
+  margin:auto;
+  width:500px;
+  height: 200px;
+  background-image: url("https://www.secsportsfan.com/images/patriots_spygate_logo.gif");
+}
+
 .teamColor{
   width: 25px;
   height: 25px;
   background-color: blue;
+}
+
+.falconsColor{
+  width: 25px;
+  height: 25px;
+  background-color: red;
 }
 
 .billsFullPage{
@@ -74,3 +96,19 @@
   border-width: 1px;
   float: right;
 }
+
+.teamIcons{
+  display: flex;
+flex-wrap: wrap;
+  align-content: space-around;
+  /* margin: 100px; */
+
+}
+
+.break{
+  margin:10px;
+}
+/* .teamIconRowTwo{
+  display: flex;
+  flex-direction: column;
+} */
