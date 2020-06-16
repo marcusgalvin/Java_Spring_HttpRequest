@@ -73,10 +73,6 @@ public static String getTeams() {
 					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl
 					);
 			System.out.println("--------------------");
-						
-//			return "Team Id: " + id + '\n' + city + " " + name + '\n' + "Coach: " + coach + '\n' 
-//					+ "Conference: " + division +  '\n' + "PrimaryTeamColor: " + primaryColor + '\n' + "Logo URL: " + logoUrl;
-			
 			
 		}
 		return responseBody;
@@ -109,10 +105,6 @@ public static String getTeams() {
 				int playerId = player.getInt("PlayerID");
 				String firstName = player.getString("FirstName");
 				String LastName = player.getString("LastName");
-//				String position = player.getString("Position");
-				
-//				return firstName;
-				
 
 			}
 			return responseBody;
@@ -141,14 +133,6 @@ public static String getTeams() {
 							
 				for(int i = 0; i < billsNews.length(); i++) {
 					JSONObject player = billsNews.getJSONObject(i);
-//					int playerId = player.getInt("PlayerID");
-//					String firstName = player.getString("FirstName");
-//					String LastName = player.getString("LastName");
-//					String position = player.getString("Position");
-					
-//					return firstName;
-					
-
 				}
 				return responseBody;
 				

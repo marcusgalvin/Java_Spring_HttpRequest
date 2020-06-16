@@ -20,18 +20,54 @@ async componentDidMount(){
 
   this.setState({ team: data, loading: false});
 
-  console.log(data[0].PointsAllowed);
-  console.log(data[1].PointsAllowed);
 
-  var ArizonaCardinals = data[0];
-  var AtlantaFalcons = data[1];
+for(var i = 0; i < data.length; i++){
+
+  console.log(data[0]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // console.log(data[0].PointsAllowed);
+  // console.log(data[1].PointsAllowed);
+
+  // var ArizonaCardinals = data[0];
+  // var AtlantaFalcons = data[1];
 
   //points allowed
-  if(ArizonaCardinals.PointsAllowed > AtlantaFalcons.PointsAllowed){
-    console.log(ArizonaCardinals.Team + " has allowed more points scored than " + AtlantaFalcons.Team)
-  } else if(ArizonaCardinals.PointsAllowed < AtlantaFalcons.PointsAllowed) {
-    console.log(AtlantaFalcons + " have allowed more points scored than " + ArizonaCardinals.Team)
-  }
+  // if(ArizonaCardinals.PointsAllowed > AtlantaFalcons.PointsAllowed){
+  //   console.log(ArizonaCardinals.Team + " has allowed more points scored than " + AtlantaFalcons.Team)
+  // } else if(ArizonaCardinals.PointsAllowed < AtlantaFalcons.PointsAllowed) {
+  //   console.log(AtlantaFalcons + " have allowed more points scored than " + ArizonaCardinals.Team)
+  // }
+
+  //touchdowns allowed
+  // if(ArizonaCardinals.TouchdownsScored > AtlantaFalcons.TouchdownsScored){
+  //   console.log(ArizonaCardinals.Team + " has scored more defensive Touchdowns than " + AtlantaFalcons.Team)
+  // } else if(ArizonaCardinals.TouchdownsScored < AtlantaFalcons.TouchdownsScored) {
+  //   console.log(AtlantaFalcons.Team + " have scored more defensive Touchdowns than " + ArizonaCardinals.Team)
+  // } else if(ArizonaCardinals.TouchdownsScored == AtlantaFalcons.TouchdownsScored){
+  //   console.log("Both teams scored the same amount of defensive touchdowns")
+  // }
+
+  //sacks
+  //  if(ArizonaCardinals.Sacks > AtlantaFalcons.Sacks){
+  //   console.log(ArizonaCardinals.Team + " has scored more sacks than " + AtlantaFalcons.Team)
+  // } else if(ArizonaCardinals.Sacks < AtlantaFalcons.Sacks) {
+  //   console.log(AtlantaFalcons.Team + " have scored more sacks than " + ArizonaCardinals.Team)
+  // } else if(ArizonaCardinals.Sacks == AtlantaFalcons.Sacks){
+  //   console.log("Both teams scored the same amount of sacks")
+  // }
   
   }
 
@@ -54,8 +90,7 @@ async componentDidMount(){
 			
 		
 		<div className="billsDefStats">		
-          {/* <p>Points Allowed: {this.state.team.data[0]}</p> */}
-		
+          {/* <p>Points Allowed: {this.props.data.PointsAllowed}</p> */}
          
 		</div>
 
