@@ -134,9 +134,10 @@ if(defensiveTouchdowns > 10){
   console.log(team + " has " + defensiveTouchdowns + " defensive TDs");
   weight = weight + 0;
   console.log("weight after DEF TD calc " + weight)
-  console.log("-----------------------")
 }
 
+console.log(weight);
+  console.log("-----------------------")
 
 }
 
@@ -146,52 +147,7 @@ if(defensiveTouchdowns > 10){
 //print total league points to compare each team too
   console.log("total fantasy DEF league points " + totalPoints);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // console.log(data[0].PointsAllowed);
-  // console.log(data[1].PointsAllowed);
-
-  // var ArizonaCardinals = data[0];
-  // var AtlantaFalcons = data[1];
-
-  //points allowed
-  // if(ArizonaCardinals.PointsAllowed > AtlantaFalcons.PointsAllowed){
-  //   console.log(ArizonaCardinals.Team + " has allowed more points scored than " + AtlantaFalcons.Team)
-  // } else if(ArizonaCardinals.PointsAllowed < AtlantaFalcons.PointsAllowed) {
-  //   console.log(AtlantaFalcons + " have allowed more points scored than " + ArizonaCardinals.Team)
-  // }
-
-  //touchdowns allowed
-  // if(ArizonaCardinals.TouchdownsScored > AtlantaFalcons.TouchdownsScored){
-  //   console.log(ArizonaCardinals.Team + " has scored more defensive Touchdowns than " + AtlantaFalcons.Team)
-  // } else if(ArizonaCardinals.TouchdownsScored < AtlantaFalcons.TouchdownsScored) {
-  //   console.log(AtlantaFalcons.Team + " have scored more defensive Touchdowns than " + ArizonaCardinals.Team)
-  // } else if(ArizonaCardinals.TouchdownsScored == AtlantaFalcons.TouchdownsScored){
-  //   console.log("Both teams scored the same amount of defensive touchdowns")
-  // }
-
-  //sacks
-  //  if(ArizonaCardinals.Sacks > AtlantaFalcons.Sacks){
-  //   console.log(ArizonaCardinals.Team + " has scored more sacks than " + AtlantaFalcons.Team)
-  // } else if(ArizonaCardinals.Sacks < AtlantaFalcons.Sacks) {
-  //   console.log(AtlantaFalcons.Team + " have scored more sacks than " + ArizonaCardinals.Team)
-  // } else if(ArizonaCardinals.Sacks == AtlantaFalcons.Sacks){
-  //   console.log("Both teams scored the same amount of sacks")
-  // }
-  
-  }
+}
 
   
 
