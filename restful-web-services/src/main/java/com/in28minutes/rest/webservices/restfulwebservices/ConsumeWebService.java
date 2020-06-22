@@ -93,7 +93,6 @@ public static String getTeams() {
 					.thenApply(ConsumeWebService::parsePlayerData)
 					.join();
 
-int i = 0;
 		}
 //public parse dataß
 		public static String parsePlayerData(String responseBody) {
