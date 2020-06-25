@@ -7,6 +7,7 @@ export default class playerCompare extends React.Component {
   state = {
     loading: true,
     team : null,
+    weight: ""
     
     
   }
@@ -23,39 +24,57 @@ async componentDidMount(){
 
 //function to locate each teams defensive fantasy points
 var totalPoints = 0;
-var teamWeight;
+var totalWeight;
 var weight;
 var totalLeagueTacklesForLoss = 0;
+
+var sacks;
+var defensiveTouchdowns;
+var tacklesForLoss;
+var interceptions;
+var forcedFumbles;
+var fumbleReturnYards
+
+var max = 0;
+var test;
+
 
 for(var i = 0; i < data.length; i++){
   var team = data[i].Team;
   totalPoints += data[i].FantasyPoints
-  totalLeagueTacklesForLoss += data[i].TacklesForLoss;
 
-  var sacks = data[i].Sacks;
-  var defensiveTouchdowns = data[i].DefensiveTouchdowns;
-  var tacklesForLoss = data[i].TacklesForLoss;
-  var interceptions = data[i].Interceptions;
-  var forcedFumbles = data[i].FumblesForced;
-  var fumbleReturnYards = data[i].FumbleReturnYards;
+  // totalLeagueTacklesForLoss += data[i].TacklesForLoss;
+
+   sacks = data[i].Sacks;
+   defensiveTouchdowns = data[i].DefensiveTouchdowns;
+   tacklesForLoss = data[i].TacklesForLoss;
+   interceptions = data[i].Interceptions;
+   forcedFumbles = data[i].FumblesForced;
+   fumbleReturnYards = data[i].FumbleReturnYards;
 
 
  
 
   //make weight = to blocked kicks and track it as a data point from the API
   //set weight to 0
-  weight = data[i].BlockedKicks - data[i].BlockedKicks;
+  // weight = data[i].BlockedKicks
+  
+  weight = 0;
 
 //fumble return yards
 var highestLeagueFumbleReturnYards = 256;
 var fumbleReturnYardsPercentage = (fumbleReturnYards/ highestLeagueFumbleReturnYards) * 100;
-console.log("here" + fumbleReturnYards)
 
-if(fumbleReturnYardsPercentage > 75){
+if(fumbleReturnYards < 0){
+  console.log(team + " fumble return yards " + fumbleReturnYards)
+  weight = weight - 0.25;
+  console.log("weight after fumble return yard calc " + weight)
+}
+else if(fumbleReturnYardsPercentage > 75){
   console.log(team + " fumble return yards " + fumbleReturnYards)
   weight = weight + 0.75;
   console.log("weight after fumble return yard calc " + weight)
-} else if(fumbleReturnYardsPercentage < 75 && fumbleReturnYardsPercentage <= 50){
+} else if(fumbleReturnYardsPercentage < 75 && fumbleReturnYardsPercentage >= 50){
   console.log(team + " fumble return yards " + fumbleReturnYards)
   weight = weight + 0.50;
   console.log("weight after fumble return yard calc " + weight)
@@ -201,15 +220,19 @@ if(defensiveTdPercentage > 75){
 
 
 
-
-
-console.log(weight);
+console.log("current weight: " + weight);
   console.log("-----------------------")
 
+//find the maximum weight amount in numbers
+var value = Number(weight);
+if(value > max){
+  max = value;
 }
 
+console.log(team[i] + " is in the lead with " + max + " points")
 
 
+}
 
 
 
@@ -218,12 +241,11 @@ console.log(weight);
 
 //print total league points to compare each team too
   console.log("total league fantasy DEF league points " + totalPoints);
-  console.log("total league tackles for loss " + totalLeagueTacklesForLoss);
-
-  console.log("total league tackles for loss " + totalLeagueTacklesForLoss / 32);
-
+  
 
 }
+
+
 
   
 
@@ -235,6 +257,8 @@ console.log(weight);
 
 
   render(){
+    
+
     return (
     <div>
       {this.state.loading || !this.state.team ? (
@@ -244,8 +268,12 @@ console.log(weight);
 			
 		
 		<div className="billsDefStats">		
-          {/* <p>Points Allowed: {this.props.data.PointsAllowed}</p> */}
-         
+        <p>Team Defensive Ranking:</p> 
+        <p>{this.state.weight}</p>
+        
+
+
+
 		</div>
 
     <div>
