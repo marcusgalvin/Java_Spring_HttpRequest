@@ -34,6 +34,7 @@ var tacklesForLoss;
 var interceptions;
 var forcedFumbles;
 var fumbleReturnYards
+var interceptionTouchdowns;
 
 var max = 0;
 var test;
@@ -51,6 +52,7 @@ for(var i = 0; i < data.length; i++){
    interceptions = data[i].Interceptions;
    forcedFumbles = data[i].FumblesForced;
    fumbleReturnYards = data[i].FumbleReturnYards;
+   interceptionTouchdowns = data[i].InterceptionReturnTouchdowns;
 
 
  
@@ -60,6 +62,36 @@ for(var i = 0; i < data.length; i++){
   // weight = data[i].BlockedKicks
   
   weight = 0;
+
+
+
+//interception touchdowns
+var highestLeagueInterceptionTouchdowns = 7;
+var interceptionTdPercentage = (interceptionTouchdowns / highestLeagueInterceptionTouchdowns) * 100;
+
+if(interceptionTdPercentage > 75){
+  console.log(team + " interception TDs " + interceptionTouchdowns);
+  weight = weight + .75;
+  console.log("weight after interception TD calc " + weight);
+} else if (interceptionTdPercentage < 75 && interceptionTdPercentage >= 50){
+  console.log(team + " interception TDs " + interceptionTouchdowns);
+  weight = weight + .75;
+  console.log("weight after interception TD calc " + weight);
+} else if(interceptionTdPercentage < 50 && interceptionTdPercentage >= 25){
+  console.log(team + " interception TDs " + interceptionTouchdowns);
+  weight = weight + .50;
+  console.log("weight after interception TD calc " + weight);
+} else if(interceptionTdPercentage < 25 && interceptionTdPercentage >= 10){
+  console.log(team + " interception TDs " + interceptionTouchdowns);
+  weight = weight + .25;
+  console.log("weight after interception TD calc " + weight);
+} else if(interceptionTdPercentage == 0){
+  console.log(team + " interception TDs " + interceptionTouchdowns);
+  weight = weight + 0.0;
+  console.log("weight after interception TD calc " + weight);
+}
+
+
 
 //fumble return yards
 var highestLeagueFumbleReturnYards = 256;
@@ -230,6 +262,9 @@ if(value > max){
 }
 
 console.log(team[i] + " is in the lead with " + max + " points")
+
+
+
 
 
 }
