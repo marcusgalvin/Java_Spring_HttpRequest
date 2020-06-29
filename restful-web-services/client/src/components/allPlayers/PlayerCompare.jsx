@@ -262,7 +262,7 @@ if(value > max){
 }
 
 console.log(team[i] + " is in the lead with " + max + " points")
-
+var test = 0;
 
 
 
