@@ -312,7 +312,6 @@ var test = 0;
 		</div>
 
     <div>
-      {/* <FalconsDefStats/> */}
     </div>
 
 

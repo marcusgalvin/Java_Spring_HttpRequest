@@ -1,9 +1,9 @@
 import React from "react";
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
-import AtlantaFalcons from "./components/allTeams/AtlantaFalcons";
-import BuffaloBills from "./components/allTeams/BuffaloBills";
-import NewEnglandPatriots from "./components/allTeams/NewEnglandPatriots";
+import ArizonaCardinals from "./allTeams/ArizonaCardinals";
+import AtlantaFalcons from "./allTeams/AtlantaFalcons";
+import BuffaloBills from "./allTeams/BuffaloBills";
+import NewEnglandPatriots from "./allTeams/NewEnglandPatriots";
 
 import Login from "./components/allTeams/Login";
 
