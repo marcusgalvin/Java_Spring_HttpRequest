@@ -49,7 +49,7 @@ public static String getTeams() {
 		
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder()
-				.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+				.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 		return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 				.thenApply(HttpResponse::body)
 				.thenApply(ConsumeWebService::parse)
@@ -94,7 +94,7 @@ public static String getTeams() {
 					.join();
 
 		}
-//public parse dataß
+//public parse data
 		public static String parsePlayerData(String responseBody) {
 			JSONArray players = new JSONArray(responseBody);
 			
@@ -117,7 +117,7 @@ public static String getTeams() {
 				
 				HttpClient client = HttpClient.newHttpClient();
 				HttpRequest request = HttpRequest.newBuilder()
-						.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/BUF?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+						.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/BUF?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 				return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 						.thenApply(HttpResponse::body)
 						.thenApply(ConsumeWebService::parseBillsNews)
@@ -144,7 +144,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/BUF?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/BUF?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -157,7 +157,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/ATL?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/ATL?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -169,7 +169,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/NE?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeasonByTeam/2019/NE?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -182,7 +182,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/TeamSeasonStats/2019?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/TeamSeasonStats/2019?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -196,7 +196,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/ATL?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/ATL?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -209,7 +209,18 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/NE?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/NE?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
+					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+							.thenApply(HttpResponse::body)
+							.join();
+				}
+//cardinals news
+			@GetMapping(path="/cardinalsNews")
+			public static String getCardinalsNews() {
+					
+					HttpClient client = HttpClient.newHttpClient();
+					HttpRequest request = HttpRequest.newBuilder()
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/NewsByTeam/ARI?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();
@@ -221,7 +232,7 @@ public static String getTeams() {
 					
 					HttpClient client = HttpClient.newHttpClient();
 					HttpRequest request = HttpRequest.newBuilder()
-							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeason/2019?key=d83e5f3f5eb4447c9c175a0aa2319872")).build();
+							.uri(URI.create("https://api.sportsdata.io/v3/nfl/stats/json/FantasyDefenseBySeason/2019?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
 					return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 							.thenApply(HttpResponse::body)
 							.join();

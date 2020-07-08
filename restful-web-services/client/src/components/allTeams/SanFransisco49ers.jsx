@@ -1,11 +1,11 @@
 import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
-import CardinalsDefStats from "./allTeamsDefStats/CardinalsDefStats";
-import CardinalsOffStats from "./allTeamsOffStats/CardinalsOffStats";
+import SanFranDefStats from "./allTeamsDefStats/SanFranDefStats";
+import SanFranOffStats from "./allTeamsOffStats/SanFranOffStats";
 // import logo from './logo.svg';
 // import './App.css';
 
-export default class ArizonaCardinals extends React.Component {
+export default class SanFransisco49ers extends React.Component {
 
   state = {
     loading: true,
@@ -21,7 +21,7 @@ async componentDidMount(){
 
   
 
-  this.setState({ team: data[0], loading: false});
+  this.setState({ team: data[28], loading: false});
 
 
 }
@@ -33,7 +33,7 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div className="billFullPage">
-			<div className="cardinalsBanner">
+			<div className="sanFranBanner">
 				</div>
 		
 		<div className="billsContainer">
@@ -56,13 +56,13 @@ async componentDidMount(){
 
 		<div className="defStats">
 			<p>Defensive Stats:</p>
-			<CardinalsDefStats/>
+			<SanFranDefStats/>
 
 			</div>
 
 <div className="defStats">
 			<p>Offensive Stats:</p>
-			<CardinalsOffStats/>
+			<SanFranOffStats/>
 
 			</div>
 

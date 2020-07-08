@@ -7,7 +7,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-export default class FalconsNews extends React.Component {
+export default class CardinalsNews extends React.Component {
 
   state = {
     loading: true,
@@ -16,7 +16,7 @@ export default class FalconsNews extends React.Component {
   }
 
 async componentDidMount(){
-  const url = "http://localhost:8080/falconsNews";
+  const url = "http://localhost:8080/cardinalsNews";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
@@ -48,6 +48,7 @@ async componentDidMount(){
           <CardTitle>{this.state.team.Title}</CardTitle>
           <CardSubtitle>Date: {this.state.team.TimeAgo}</CardSubtitle>
           <CardSubtitle>Source: {this.state.team.Source}</CardSubtitle>
+          <br/>
           <CardText>{this.state.team.Content}</CardText>
         </CardBody>
       </Card>

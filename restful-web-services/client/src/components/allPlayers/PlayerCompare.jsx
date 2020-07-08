@@ -304,7 +304,7 @@ var test = 0;
 		
 		<div className="billsDefStats">		
         <p>Team Defensive Ranking:</p> 
-        <p>{this.state.weight}</p>
+        <h1>SanFransisco 49ers</h1>
         
 
 

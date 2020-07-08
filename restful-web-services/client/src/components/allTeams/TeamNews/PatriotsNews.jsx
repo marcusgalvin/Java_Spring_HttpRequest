@@ -1,5 +1,11 @@
 import React from "react";
+// import logo from './logo.svg';
+// import './App.css';
 
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
 export default class PatriotsNews extends React.Component {
 
@@ -32,10 +38,21 @@ async componentDidMount(){
 			
 
 		<div className="billsNews">		
-          <p>{this.state.team.Title}</p>
-		  <p>{this.state.team.Content}</p>
-          <p>Date: {this.state.team.TimeAgo}</p>
-          <p>Source: {this.state.team.Source}</p>
+         
+
+
+
+      <Card className="info">
+        <CardImg top width="100%" src="https://www.steelcityunderground.com/wp-content/uploads/2017/03/nfl-league-news.png" alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{this.state.team.Title}</CardTitle>
+          <CardSubtitle>Date: {this.state.team.TimeAgo}</CardSubtitle>
+          <CardSubtitle>Source: {this.state.team.Source}</CardSubtitle>
+          <br/>
+          <CardText>{this.state.team.Content}</CardText>
+        </CardBody>
+      </Card>
+
 
 		  
 

@@ -6,7 +6,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-export default class FalconsOffStats extends React.Component {
+export default class CardinalsOffStats extends React.Component {
 
   state = {
     loading: true,
@@ -20,7 +20,7 @@ async componentDidMount(){
   const data = await response.json();
   console.log(data);
 
-  this.setState({ team: data[10], loading: false});
+  this.setState({ team: data[0], loading: false});
 }
 
   render(){
@@ -38,7 +38,7 @@ async componentDidMount(){
 
 
       <Card className="info">
-        <CardImg top width="100%" src="https://cdn.vox-cdn.com/thumbor/iMvq_Qyzc9Tz4CkC8lhJLMmqYAE=/0x0:3000x1500/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19655909/629176500.jpg.jpg" alt="Card image cap" />
+        <CardImg top width="100%" src="https://cdn.vox-cdn.com/thumbor/l-kWTlwoRLGdh3MuWC4muh1kemk=/0x610:2981x2101/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19560859/usa_today_13850002.jpg" alt="Card image cap" />
         <CardBody>
           <CardTitle>Offensive Statistics</CardTitle>
           <p>Season: {this.state.team.Season}</p>	

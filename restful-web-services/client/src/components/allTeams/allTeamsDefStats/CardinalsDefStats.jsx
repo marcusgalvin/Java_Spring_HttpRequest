@@ -8,7 +8,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-export default class PatriotsDefStats extends React.Component {
+export default class CardinalsDefStats extends React.Component {
 
   state = {
     loading: true,
@@ -17,14 +17,14 @@ export default class PatriotsDefStats extends React.Component {
   }
 
 async componentDidMount(){
-  const url = "http://localhost:8080/patriotsDefStats";
+  const url = "http://localhost:8080/allTeamsDefStats";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
 
   
 
-  this.setState({ team: data, loading: false});
+  this.setState({ team: data[0], loading: false});
 
 
 }
@@ -41,7 +41,7 @@ async componentDidMount(){
 		<div className="billsDefStats">		
        
           <Card className="info">
-        <CardImg top width="100%" src="https://cdn.vox-cdn.com/thumbor/Sn10ZMdzFdCkmxy7kjj0e6YKY_M=/0x0:3693x1847/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19278015/usa_today_13493148.jpg" alt="Card image cap" />
+        <CardImg top width="100%" src="https://cdn.vox-cdn.com/thumbor/0H1pR4DLJmhAuXrLUHiiui_XHtA=/0x0:2641x1321/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/20012449/1194161967.jpg.jpg" alt="Card image cap" />
         <CardBody>
           <CardTitle>Defensive Statistics</CardTitle>
             <p>Season: {this.state.team.Season}</p>	

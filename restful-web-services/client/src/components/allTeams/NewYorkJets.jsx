@@ -1,7 +1,7 @@
 import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
-import CardinalsDefStats from "./allTeamsDefStats/CardinalsDefStats";
-import CardinalsOffStats from "./allTeamsOffStats/CardinalsOffStats";
+import JetsDefStats from "./allTeamsDefStats/JetsDefStats";
+import JetsOffStats from "./allTeamsOffStats/JetsOffStats";
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -21,7 +21,7 @@ async componentDidMount(){
 
   
 
-  this.setState({ team: data[0], loading: false});
+  this.setState({ team: data[24], loading: false});
 
 
 }
@@ -33,7 +33,7 @@ async componentDidMount(){
         <div>loading...</div>
       ) : (
         <div className="billFullPage">
-			<div className="cardinalsBanner">
+			<div className="jetsBanner">
 				</div>
 		
 		<div className="billsContainer">
@@ -56,13 +56,13 @@ async componentDidMount(){
 
 		<div className="defStats">
 			<p>Defensive Stats:</p>
-			<CardinalsDefStats/>
+			<JetsDefStats/>
 
 			</div>
 
 <div className="defStats">
 			<p>Offensive Stats:</p>
-			<CardinalsOffStats/>
+			<JetsOffStats/>
 
 			</div>
 

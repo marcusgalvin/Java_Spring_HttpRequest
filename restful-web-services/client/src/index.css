@@ -23,6 +23,68 @@
   background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ne.png&w=100&h=100&transparent=true");
 }
 
+.sanFranButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://lh3.googleusercontent.com/TsKEQ_eI6ocdP18RfHGuxsUX5YqoHqEfbjkO3Wv19RZ00TjcVXKSUf41LnVVS-tdXg=s100-rw");
+}
+
+.dolphinsButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://spotonflorida.com/images/icon/miami-dolphins-video.jpg");
+}
+
+.lionsButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/det.png&w=100&h=100&transparent=true");
+}
+
+.jetsButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyj.png&w=100&h=100&transparent=true");
+}
+
+.ravensButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://static.www.nfl.com/image/private/t_thumb_squared/f_auto/league/ucsdijmddsqcj1i9tddd");
+}
+
+.cowboysButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://static.clubs.nfl.com/image/private/t_thumb_squared/f_auto/cowboys/xqdfbc4llfyacuchyxoj.jpg");
+}
+
+.eaglesButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://media.glassdoor.com/sql/5252/philadelphia-eagles-squarelogo.png");
+}
+
+.seahawksButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://media.glassdoor.com/sql/5264/seattle-seahawks-squarelogo-1451381873265.png");
+}
+
+.chiefsButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/kc.png&w=100&h=100&transparent=true");
+}
+
+.steelersButton{
+  width: 110px;
+  height: 105px;
+  background-image: url("https://cdn.shopify.com/s/files/1/1949/1233/products/Pittsburgh_Steelers_circle_100x.png?v=1575428277");
+}
+
+
+
 
 
 /* Banners for team pages */
@@ -33,12 +95,63 @@
   background-image: url("https://nhrdez.files.wordpress.com/2013/05/atlanta_falcons.jpg?w=640");
 }
 
+.cardinalsBanner{
+  margin:auto;
+  width:500px;
+  height: 200px;
+  background-image: url("https://i.pinimg.com/originals/61/18/75/61187500dd3b36bdf246eb26fe9b7588.jpg");
+}
+
 .patsBanner{
   margin:auto;
   width:500px;
   height: 200px;
   background-image: url("https://www.secsportsfan.com/images/patriots_spygate_logo.gif");
 }
+
+.sanFranBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://www.eastbaytimes.com/wp-content/uploads/2016/08/20060301_010056_static-49ers-17.jpg?w=500");
+}
+
+.dolphinsBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://i1.wp.com/www.footballxos.com/wp-content/uploads/Miami-Dolphins.jpg?resize=500,250");
+}
+
+.lionsBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://userscontent2.emaze.com/images/332f1363-699e-4ec9-8ec3-d45b79d7580a/7537b2bdb2e5542f7b31f5311a260d55.jpg");
+}
+
+.jetsBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://cdn.knoji.com/images/logo/newyorkjetscom.jpg?aspect=center&snap=false&width=500&height=250");
+}
+
+.ravensBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://i0.wp.com/www.footballxos.com/wp-content/uploads/Baltimore-Ravens.jpg?resize=500,250");
+}
+
+.cowboysBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://i1.wp.com/www.footballxos.com/wp-content/uploads/Dallas-Cowboys.jpg?resize=500,250");
+}
+
+
 
 .teamColor{
   width: 25px;
@@ -82,18 +195,18 @@
 .teamFeed{
   width:600px;
   height: 500px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
+  
   float: center;
+}
+
+.info {
+  width:500px;
+  height:800px;
 }
 
 .defStats{
   width:600px;
   height: 500px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
   float: right;
 }
 
@@ -112,3 +225,39 @@ flex-wrap: wrap;
   display: flex;
   flex-direction: column;
 } */
+
+
+
+.logout-container{
+  margin:auto;
+  text-align: center;
+} 
+
+.login{
+  text-align: center;
+}
+
+.password-input{
+  margin:25px;
+}
+
+.username-input{
+  margin:25px;
+}
+
+.login-btn {
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

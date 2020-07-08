@@ -1,16 +1,15 @@
 // import React from "react";
 import React, {Component} from 'react'
 import{BrowserRouter as Router, Route} from 'react-router-dom'
+import AuthenticationService from '../../AuthenticationService.js'
+// import App from "../components/allTeams/Login"
 // import logo from './logo.svg';
 // import './App.css';
 
+import { Button } from 'reactstrap';
 
-//welcome page
-class WelcomeComponent extends Component{
-  redner(){
-    return <div>Welcome in28minutes</div>
-  }
-}
+
+
 
 
 
@@ -23,7 +22,7 @@ class Login extends Component{
 constructor(props){
   super(props)
   this.state={
-    username: "in28minutes",
+    username: "MarcusGalvin",
     password: '',
     hasLoginFailed: false,
     showSuccessMessage: false
@@ -70,8 +69,13 @@ handleChange(event){
 
 loginClicked(){
   //in28minutes, dummy
-  if(this.state.username === 'in28minutes' &&this.state.password==='dummy'){
-    console.log("succesful")
+  if(this.state.username === 'MarcusGalvin' &&this.state.password==='dummy'){
+
+    AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
+
+
+    //link to website after login
+    this.props.history.push(`/TeamClickIcons/${this.state.username}`)
     this.setState({showSuccessMessage: true})
         this.setState({hasLoginFailed: false})
 
@@ -86,18 +90,31 @@ loginClicked(){
 
   render(){
     return (
-    <div>
+    <div className="login">
+
+
+      <div className="container">
       {/* <ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/> */}
-      {this.state.hasLoginFailed && <div>Invalid Credentials</div>}
+      {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
       {this.state.showSuccessMessage && <div>Login Successful</div>}
 
       {/* <ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/> */}
 
-      UserName: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-      Password <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
-      <button onClick={this.loginClicked}>Login</button>
+    <div className="username-input">
+
+      <p>UserName</p> <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+    </div>
+    <div className="password-input">
+      <p>Password</p> <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+    </div>
+
+    <div className="login-btn">
+      <Button color="success" className="btn" onClick={this.loginClicked}>Login</Button>
+            {/* <Button color="success">success</Button>{' '} */}
+
+    </div>
       </div>
-       
+      </div>
      
      
     )    
