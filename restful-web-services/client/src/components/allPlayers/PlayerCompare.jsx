@@ -1,6 +1,8 @@
 import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
+import { Table } from 'reactstrap';
+
 
 export default class playerCompare extends React.Component {
 
@@ -304,8 +306,114 @@ var test = 0;
 		
 		<div className="billsDefStats">		
         <p>Team Defensive Ranking:</p> 
-        <h1>SanFransisco 49ers</h1>
         
+      
+
+      <Table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team Name</th>
+          <th>State</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/jmGajHlefPC2kDpcHUzwPA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MDtpbD1wbGFuZQ--/http://l.yimg.com/j/assets/i/us/sp/v/nfl/teams/83/70x70/sfo.png.cf.jpg" alt="Girl in a jacket" width="50" height="50"></img> SanFransisco 49ers</td>
+          <td>California</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td><img src="https://www.bet-on-the-nfl.com/wp-content/uploads/2017/04/pittsburgh_steelers.gif" alt="" width="50" height="50"></img> Pittsburgh Steelers</td>
+          <td>Pennsylvania</td>
+          <td>@Twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td><img src="https://www.bet-on-the-nfl.com/wp-content/uploads/2017/04/minnesota_vikings.gif" alt="" width="50" height="50"></img> Minnesota Vikings</td>
+          <td>Minnesota</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/OHal0dg6VVk8OVGjEN1KqQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MDtpbD1wbGFuZQ--/http://l.yimg.com/j/assets/i/us/sp/v/nfl/teams/83/70x70/nwe.png.cf.jpg" alt="" width="50" height="50"></img> New England Patriots</td>
+          <td>Massachusetts</td>
+          <td>@twitter</td>
+        </tr>
+
+        <tr>
+          <th scope="row">5</th>
+          <td><img src="https://www.bet-on-the-nfl.com/wp-content/uploads/2017/04/baltimore_ravens.gif" alt="" width="50" height="50"></img> Baltimore Ravens</td>
+          <td>Maryland</td>
+          <td>@twitter</td>
+        </tr>
+
+        <tr>
+          <th scope="row">6</th>
+          <td><img src="https://www.bet-on-the-nfl.com/wp-content/uploads/2017/04/tampa_bay_buccaneers.gif" alt="" width="50" height="50"></img> Tampa Bay Buccaneers</td>
+          <td>Florida</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/hea4Lcc9sq6AiEb.y6YWsQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MDtpbD1wbGFuZQ--/http://l.yimg.com/j/assets/ipt/sea_70x70.png.cf.jpg" alt="" width="50" height="50"></img> Seatle SeaHawks</td>
+          <td>Washington</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/AaJ2GBtfPKfqBLxc8a.Sig--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MDtpbD1wbGFuZQ--/http://l.yimg.com/j/assets/i/us/sp/v/nfl/teams/83/70x70/nor.png.cf.jpg" alt="" width="50" height="50"></img> New Orleans Saints</td>
+          <td>Louisiana</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td><img src="https://i.pinimg.com/originals/22/f2/6f/22f26ff5f2b74982e3b308c8654aa160.jpg" alt="" width="50" height="50"></img> Kansas City Cheifs</td>
+          <td>Missouri</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/KtfjDMyoCqfNL_.NwawB1g--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MA--/http://media.zenfs.com/en_us/News/YahooSports/nyj.gif" alt="" width="50" height="50"></img> New York Jets</td>
+          <td>New York</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/ciOuxxUzG4wfY90.myUsVQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MDtpbD1wbGFuZQ--/http://l.yimg.com/j/assets/i/us/sp/v/nfl/teams/83/70x70/phi.png.cf.jpg" alt="" width="50" height="50"></img> Philadelphia Eagles</td>
+          <td>Pennsylvania</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td><img src="https://s.yimg.com/ny/api/res/1.2/_35Mkxxvjvda9Ej.mohaoQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NTA7aD01MA--/http://media.zenfs.com/en_us/News/YahooSports/ten.gif" alt="" width="50" height="50"></img> Tennessee Titans</td>
+          <td>Tennessee</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/oak.png?w=50&h=50&transparent=true" alt="" width="50" height="50"></img> Las Vegas Raiders</td>
+          <td>Nevada</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td><img src="https://walterfootball.com/images/fball/texansb_logo.gif" alt="" width="50" height="50"></img> Houstan Texans</td>
+          <td>Texas</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td><img src="https://www.bet-on-the-nfl.com/wp-content/uploads/2017/04/arizona_cardinals.gif" alt="" width="50" height="50"></img> Arizona Cardinals</td>
+          <td>Arizona</td>
+          <td>@twitter</td>
+        </tr>
+        
+      </tbody>
+    </Table>
+
 
 
 

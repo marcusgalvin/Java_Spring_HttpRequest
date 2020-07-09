@@ -10,6 +10,8 @@ import DetroitLions from "./DetroitLions";
 import NewYorkJets from "./NewYorkJets";
 import BaltimoreRavens from "./BaltimoreRavens";
 import DallasCowboys from "./DallasCowboys";
+import PhiladelphiaEagles from "./PhiladelphiaEagles";
+import SeatleSeaHawks from "./SeatleSeaHawks";
 
 // import Login from "./components/allTeams/Login";
 
@@ -130,7 +132,24 @@ export default class App extends React.Component {
           </Link>
         </div>
     	<div className="break"></div>
+{/* eagles */}
+      <div className="teamIconRowTwo">
 
+          <Link to="/PhiladelphiaEagles">
+            <button className="eaglesButton">
+            </button>
+          </Link>
+        </div>
+    	<div className="break"></div>
+{/* seahawks */}
+      <div className="teamIconRowTwo">
+
+          <Link to="/SeatleSeaHawks">
+            <button className="seahawksButton">
+            </button>
+          </Link>
+        </div>
+    	<div className="break"></div>
 
 
 
@@ -199,6 +218,14 @@ export default class App extends React.Component {
 
           <Route path="/DallasCowboys">
             <DallasCowboys/>
+          </Route>
+
+           <Route path="/PhiladelphiaEagles">
+            <PhiladelphiaEagles/>
+          </Route>
+
+          <Route path="/SeatleSeaHawks">
+            <SeatleSeaHawks/>
           </Route>
 
           {/* <Route path="/PlayerCompare">

@@ -21,8 +21,8 @@ export default class Logout extends React.Component {
 			<br/>
 			<p>For more useful NFL API's and Developer Info Check out these links</p>
 			 <ul>
-				<li>"Github.com/marcusgalvin"</li>
-			    <li>"SportsData.io</li>
+				<li><a href="https://github.com/marcusgalvin">Developer's Github</a></li>
+				<li><a href="https://sportsdata.io/">Sportsdata.io</a></li>
 
 			 </ul>
 		</div>

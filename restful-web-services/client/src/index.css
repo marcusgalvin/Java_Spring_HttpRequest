@@ -151,6 +151,19 @@
   background-image: url("https://i1.wp.com/www.footballxos.com/wp-content/uploads/Dallas-Cowboys.jpg?resize=500,250");
 }
 
+.eaglesBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://i2.wp.com/www.footballxos.com/wp-content/uploads/Philadelphia-Eagles.jpg?resize=500,250");
+}
+
+.seahawksBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://cdn.knoji.com/images/logo/seahawkscom.jpg?aspect=center&snap=false&width=500&height=250");
+}
 
 
 .teamColor{
