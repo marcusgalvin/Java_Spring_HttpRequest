@@ -165,6 +165,14 @@
   background-image: url("https://cdn.knoji.com/images/logo/seahawkscom.jpg?aspect=center&snap=false&width=500&height=250");
 }
 
+.chiefsBanner{
+  margin:auto;
+  width:500px;
+  height: 225px;
+  background-image: url("https://cdn.knoji.com/images/logo/seahawkscom.jpg?aspect=center&snap=false&width=500&height=250");
+}
+
+
 
 .teamColor{
   width: 25px;

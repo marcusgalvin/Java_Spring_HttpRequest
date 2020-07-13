@@ -1,5 +1,6 @@
 import React from "react";
 // import React, {Component} from 'react'
+// import AuthenticatedRoute from "./AuthenticatedRoute";
 
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import ArizonaCardinals from "./components/allTeams/ArizonaCardinals";
@@ -42,7 +43,7 @@ export default class App extends React.Component {
           <Route path="/logout" component={Logout}/>
           <Route path="/playerCompare" component={PlayerCompare}/>
           <Route path="/welcome" component={WelcomeComponent}/>
-          <Route path="/teamClickIcons/:name" component={TeamClickIcons}/>
+          <Route  path="/teamClickIcons/:name" component={TeamClickIcons}/>
           <Route path="" component={ErrorComponent}/>
       </Switch>
       {/* <FooterComponent/> */}

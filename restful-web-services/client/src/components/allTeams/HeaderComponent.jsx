@@ -17,13 +17,15 @@ export default class HeaderComponent extends React.Component {
 		<header>
 			<nav className="navbar navbar-expand-md">
 				{/* <div><a>test</a></div> */}
-				<ul class="navbar-nav">
-					<li className="nav-link"><Link to="/teamClickIcons/MarcusGalvin">Team Stats</Link></li>
-					<li className="nav-link"><Link to="/PlayerCompare">Ranks</Link></li>
+				<ul className="navbar-nav">
+					  <li className="nav-link"><Link to="/welcome">Home</Link></li>
+
+					  <li className="nav-link"><Link to="/teamClickIcons/MarcusGalvin">Team Stats</Link></li>
+					  <li className="nav-link"><Link to="/PlayerCompare">Ranks</Link></li>
 				</ul>
 				<ul className="navbar-nav navbar-collapse justify-content-end">
-					<li className="nav-link"><Link to="/login">Login</Link></li>
-					<li className="nav-link"><Link to="/logout" onClick={AuthenticationService.logout}>Logout</Link></li>
+					  <li className="nav-link"><Link to="/login">Login</Link></li>
+					 <li className="nav-link"><Link to="/logout" onClick={AuthenticationService.logout}>Logout</Link></li>
 				</ul>
 			</nav>
 		</header>

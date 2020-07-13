@@ -1,21 +1,27 @@
-import React, {Component} from 'react'
+import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
+// import App from "../c"
+import CarouselComponent from "./CarouselComponent"
 
-class WelcomeComponent extends Component{
-redner(){
-	return(
-		<p>welcome in28minutes</p>
-	)
-}
+export default class WelcomeComponent extends React.Component {
 
-
-
-
-}
   
 
-export default WelcomeComponent
+
+  render(){
+    return (
+		
+		<div className="logout-container">
+			<CarouselComponent/>
+			
+		</div>
+
+    
+	  
+    )    
+  }
+}
 
 
 
