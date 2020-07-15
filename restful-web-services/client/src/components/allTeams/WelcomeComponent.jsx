@@ -3,6 +3,8 @@ import React from "react";
 // import './App.css';
 // import App from "../c"
 import CarouselComponent from "./CarouselComponent"
+import RouteCards from "./RouteCards";
+import LandingPageBanner from "./LandingPageBanner"
 
 export default class WelcomeComponent extends React.Component {
 
@@ -13,7 +15,9 @@ export default class WelcomeComponent extends React.Component {
     return (
 		
 		<div className="logout-container">
-			<CarouselComponent/>
+			{/* <CarouselComponent/> */}
+			<LandingPageBanner/>
+			<RouteCards/>
 			
 		</div>
 

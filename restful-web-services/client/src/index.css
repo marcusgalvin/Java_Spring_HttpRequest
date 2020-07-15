@@ -189,6 +189,7 @@
 .billsFullPage{
   display: flex;
   flex-direction: center;
+  flex-wrap: wrap;
 }
 
 .billsBanner{
@@ -272,9 +273,43 @@ text-align: center;
 
 
 
+.routeCards-container{
+  display: flex;
+align-items: center;
+  width: 1000px;
+  margin: auto;
+}
+.routeCard{
+  display: flex;
+  padding: 50px;
 
+}
 
+.roatingPics{
+  font-size: 100px;
+}
 
+.pictureOverlay{
+  font-size: 100px;
+  position: relative;
+  width: 500px;
+  top: -400px;
+  left:-50px;
+  color: black;
+  /* background-color: white; */
+  font-weight: bold;
+  
+  /* opacity: 0.4; */
+
+}
+
+.landing{
+  height: 500px;
+}
+
+.loadingSpinner{
+  margin: auto
+}
 
 
 

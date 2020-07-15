@@ -2,6 +2,7 @@ import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
 import { Table } from 'reactstrap';
+import LoadingSpinner from "./LoadingSpinner"
 
 
 export default class playerCompare extends React.Component {
@@ -299,7 +300,7 @@ var test = 0;
     return (
     <div>
       {this.state.loading || !this.state.team ? (
-        <div>loading...</div>
+        <div><LoadingSpinner/></div>
       ) : (
         <div>
 			
