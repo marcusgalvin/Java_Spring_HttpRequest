@@ -293,8 +293,9 @@ align-items: center;
   font-size: 100px;
   position: relative;
   width: 500px;
-  top: -400px;
-  left:-50px;
+   top: -500px;
+  left:-350px;
+  margin: auto;
   color: black;
   /* background-color: white; */
   font-weight: bold;
