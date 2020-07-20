@@ -297,6 +297,8 @@ align-items: center;
   left:-350px;
   margin: auto;
   color: black;
+  text-shadow: h-shadow v-shadow blur-radius currentColor;
+
   /* background-color: white; */
   font-weight: bold;
   
@@ -313,7 +315,13 @@ align-items: center;
 }
 
 
+.cardButton{
+  color:white;
+}
 
+.buttonTest{
+color:white
+}
 
 
 

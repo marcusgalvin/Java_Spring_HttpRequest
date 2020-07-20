@@ -2,6 +2,7 @@ package com.in28minutes.rest.webservices.restfulwebservices;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,48 +42,10 @@ public class HelloWorldController {
 		return new HelloWorldBean("Hello World");
 	}
 	
-//public static void main(String[] args) {
-//	
-//		
-//		//method two to connect to api - async method - java 11 or later
-////		
-//		HttpClient client = HttpClient.newHttpClient();
-//		HttpRequest request = HttpRequest.newBuilder()
-//				.uri(URI.create("https://api.sportsdata.io/v3/nfl/scores/json/Teams?key=014ecc9bac8a4a5d94b6625f3fdcf910")).build();
-//		client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-//				.thenApply(HttpResponse::body)
-//				.thenApply(HelloWorldController::parse)
-//				.join();		
-//
-//	}
-//@GetMapping(path = "/players")
-//public static String parse(String responseBody) {
-//	JSONArray teams = new JSONArray(responseBody);
-//	
-//	for(int i = 0; i < teams.length(); i++) {
-//		JSONObject team = teams.getJSONObject(i);
-//		int id = team.getInt("TeamID");
-//		String name = team.getString("Name");
-//		String city = team.getString("City");
-//		String division = team.getString("Conference");
-//		
-//		System.out.println("Team Id: " + id + '\n' + city + " " + name + '\n' + "Conference: " + division);
-//		System.out.println("--------------------");
-//	}
-//	return "hello player";
-//	
-//}
-	
-	private static void getEmployees()
-	{
-	    final String uri = "http://localhost:8080/springrestexample/employees.xml";
-
-	    RestTemplate restTemplate = new RestTemplate();
-	    String result = restTemplate.getForObject(uri, String.class);
-
-	    System.out.println(result);
+	@GetMapping(path="/hello-world/path-variable/{name")
+	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+		return new HelloWorldBean(String.format("Hello World, %s", name));
 	}
-
 	
 	
 	

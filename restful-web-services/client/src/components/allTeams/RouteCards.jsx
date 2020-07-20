@@ -23,7 +23,7 @@ export default class Logout extends React.Component {
         <CardBody>
           <CardTitle>NFL 2019 Team Stats</CardTitle>
           <CardText>Check out NFL teams Offensive & Defensive Stats, team news & more</CardText>
-          <Button color="primary"><Link to="/teamClickIcons/MarcusGalvin">Click Here</Link></Button>
+          <Button color="primary" ><Link className="buttonTest" to="/teamClickIcons/MarcusGalvin">Click Here</Link></Button>
         </CardBody>
         <CardFooter className="text-muted">Footer</CardFooter>
       </Card>
@@ -47,7 +47,7 @@ export default class Logout extends React.Component {
         <CardBody>
           <CardTitle>Top NFL Ranks 2019</CardTitle>
           <CardText>Check out how an algorithm I coded generated the top 15 defenses in the NFL</CardText>
-          <Button color="primary"><Link to="/PlayerCompare">Click Here</Link></Button>
+          <Button color="primary"><Link className="buttonTest" to="/PlayerCompare">Click Here</Link></Button>
         </CardBody>
         <CardFooter className="text-muted">Footer</CardFooter>
       </Card>
