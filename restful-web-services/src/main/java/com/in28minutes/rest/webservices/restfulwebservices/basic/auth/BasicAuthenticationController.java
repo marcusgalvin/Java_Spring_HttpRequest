@@ -1,6 +1,7 @@
-package com.in28minutes.rest.webservices.restfulwebservices;
+package com.in28minutes.rest.webservices.restfulwebservices.basic.auth;
 
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,29 +25,30 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 //controller - handles http requests
+@CrossOrigin(origins="http://localhost:3000")
 @RestController
-public class HelloWorldController {
+public class BasicAuthenticationController{
 	
 	//GET
 	//URI = /hello-world
 	//method = helloWorld
 	
-	@GetMapping(path = "/hello-world")
-	public String helloWorld() {
-		return "Hello World";
-	}
+//	@GetMapping(path = "/hello-world")
+//	public String helloWorld() {
+//		return "Hello World";
+//	}
 	
 	//hello-world, create bean
-	@GetMapping(path = "/hello-world-bean")
-	public HelloWorldBean helloWorldBean() {
-		return new HelloWorldBean("Hello World");
+	@GetMapping(path = "/basicauth")
+	public AuthenticationBean helloWorldBean() {
+		return new AuthenticationBean("you are authenticated");
 	}
 	
-	@GetMapping(path="/hello-world/path-variable/{name")
-	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
-		return new HelloWorldBean(String.format("Hello World, %s", name));
-	}
-	
+//	@GetMapping(path="/hello-world/path-variable/{name}")
+//	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+//		return new HelloWorldBean(String.format("Hello World, %s", name));
+//	}
+//	
 	
 	
 	
