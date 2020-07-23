@@ -35,7 +35,7 @@ class WelcomeComponent extends Component {
                 <h1>Welcome!</h1>
                 <div className="container">
                     Welcome {this.props.match.params.name}.
-                    You can manage your todos <Link to="/todos">here</Link>.
+                    You can manage your todos <Link to="/welcome">here</Link>.
                 </div>
                 <div className="container">
                     Click here to get a customized welcome message.
