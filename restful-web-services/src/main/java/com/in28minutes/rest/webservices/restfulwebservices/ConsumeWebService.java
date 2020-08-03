@@ -32,6 +32,7 @@ import com.fasterxml.jackson.core.JsonParser;
 @RestController
 public class ConsumeWebService {
 	
+	
 	@Autowired
 	   RestTemplate restTemplate;
 	

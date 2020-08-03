@@ -1,7 +1,9 @@
 // import React from "react";
 import React, {Component} from 'react'
-import{BrowserRouter as Router, Route} from 'react-router-dom'
+import{BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import AuthenticationService from '../../AuthenticationService.js'
+import SignUp from './SignUp';
+
 // import App from "../components/allTeams/Login"
 // import logo from './logo.svg';
 // import './App.css';
@@ -142,6 +144,11 @@ loginClicked(){
     <div className="login-btn">
       <Button color="success" className="btn" onClick={this.loginClicked}>Login</Button>
             {/* <Button color="success">success</Button>{' '} */}
+
+    </div>
+    <br />
+    <div className="test">
+          <Link to="/SignUp"> <Button  color="success" className="btn">Sign Up</Button></Link>
 
     </div>
       </div>
