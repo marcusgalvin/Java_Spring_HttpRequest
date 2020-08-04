@@ -46,7 +46,8 @@ public class ConsumeWebService {
     }
 	
 
-//get teams from api endpoint	
+//get teams from api endpoint
+
 @GetMapping(path="/teams")
 public static String getTeams() {
 		

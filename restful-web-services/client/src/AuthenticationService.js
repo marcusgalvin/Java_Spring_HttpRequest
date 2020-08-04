@@ -14,7 +14,8 @@ class AuthenticationService {
 
 		return axios.post('http://localhost:8080/authenticate',{
 			username,
-			password
+			password,
+			
 		})
 		
 	}
@@ -78,7 +79,7 @@ class AuthenticationService {
 
 
 	setupAxiosInterceptors(token){
-		
+
 			axios.interceptors.request.use(
 			(config) => {
 				if(this.isUserLoggedIn()){

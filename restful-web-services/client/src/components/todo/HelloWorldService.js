@@ -20,13 +20,13 @@ class HelloWorldService {
         // let basicAuthHeader = 'Basic ' +  window.btoa(username + ":" + password)
 
         //axios call
-        return axios.get(`http://localhost:8080/hello-world/${name}`
-        // , 
-        //         {
-        //             headers : {
-        //                 authorization: basicAuthHeader
-        //             }
-        //         }
+        return axios.get(`http://localhost:8080/hello-world/path-variable/${name}`
+        , 
+                {
+                    headers : {
+                        'Content-Type': 'application/json',
+                    }
+                }
         );
     }
 
