@@ -1,4 +1,4 @@
-package com.in28minutes.rest.basic.auth;
+package com.in28minutes.rest.webservices.restfulwebservices;
 
 public class HelloWorldBean {
 	

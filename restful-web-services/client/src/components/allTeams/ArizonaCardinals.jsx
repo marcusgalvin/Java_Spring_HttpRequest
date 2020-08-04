@@ -2,6 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import CardinalsDefStats from "./allTeamsDefStats/CardinalsDefStats";
 import CardinalsOffStats from "./allTeamsOffStats/CardinalsOffStats";
+
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -14,7 +15,7 @@ export default class ArizonaCardinals extends React.Component {
   }
 
 async componentDidMount(){
-  const url = "http://localhost:8080/teams";
+  const url = "http://localhost:1337/http://localhost:8080/teams";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
