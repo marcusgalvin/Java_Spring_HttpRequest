@@ -1,23 +1,11 @@
-// import React from "react";
 import React, {Component} from 'react'
 import{BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import AuthenticationService from '../../AuthenticationService.js'
 import SignUp from './SignUp';
 
-// import App from "../components/allTeams/Login"
-// import logo from './logo.svg';
-// import './App.css';
+
 
 import { Button } from 'reactstrap';
-
-
-
-
-
-
-
-
-
 
 class Login extends Component{
 
@@ -29,81 +17,22 @@ constructor(props){
     hasLoginFailed: false,
     showSuccessMessage: false
   }
-  // this.handleUsernameChange = this.handleUsernameChange.bind(this)
-  //   this.handlePasswordChange = this.handleUsernameChange.bind(this)
+  
   this.handleChange = this.handleChange.bind(this)
   this.loginClicked = this.loginClicked.bind(this)
 
 }
 
 handleChange(event){
-  // console.log(this.state)
   this.setState(
     {
       [event.target.name]: event.target.value
     }
   )
-
 }
 
 
-
-
-// handleUsernameChange(event){
-//   console.log(event.target.value)
-//   this.setState(
-//     {
-//       [event.target.name]: event.target.value
-//     }
-//   )
-
-// }
-
-// handlePasswordChange(event){
-//   console.log(event.target.value)
-//   this.setState(
-//     {
-//       password: event.target.value
-//     }
-//   )
-
-// }
-
 loginClicked(){
-  //in28minutes, dummy
-  // if(this.state.username === 'MarcusGalvin' &&this.state.password==='dummy'){
-
-    // this.props.history.push("/welcome")
-
-    // AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
-
-
-    //link to website after login
-  //   this.props.history.push(`/welcome/${this.state.username}`)
-  //   this.setState({showSuccessMessage: true})
-  //       this.setState({hasLoginFailed: false})
-
-    
-  // }else {
-  //   this.setState({showSuccessMessage: false})
-  //   this.setState({hasLoginFailed: true})
-  // }
-
-  // AuthenticationService
-  // .executeBasicAuthenticationService(this.state.username, this.state.password)
-  // .then(
-  //   ()=> {
-  //         AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
-  //             this.props.history.push(`/welcome/${this.state.username}`)
-  //   }).catch( ()=> {
-  //     this.setState({showSuccessMessage: false})
-  //   this.setState({hasLoginFailed: true})
-  //   }
-
-  // )
-// console.log(this.state)
-
-
   AuthenticationService
   .executeJwtAuthenticationService(this.state.username, this.state.password)
   .then((response)=> {
@@ -113,11 +42,7 @@ loginClicked(){
       this.setState({showSuccessMessage: false})
     this.setState({hasLoginFailed: true})
     }
-
   )
-
-
-
 }
 
 
@@ -148,7 +73,7 @@ loginClicked(){
     </div>
     <br />
     <div className="test">
-          <Link to="/SignUp"> <Button  color="success" className="btn">Sign Up</Button></Link>
+          <Link to="/SignUp"><Button  color="success" className="btn">Sign Up</Button></Link>
 
     </div>
       </div>

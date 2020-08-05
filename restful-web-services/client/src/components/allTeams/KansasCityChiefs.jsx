@@ -2,8 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import CardinalsDefStats from "./allTeamsDefStats/CardinalsDefStats";
 import CardinalsOffStats from "./allTeamsOffStats/CardinalsOffStats";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
 
 export default class KansasCityChiefs extends React.Component {
 
@@ -15,16 +14,13 @@ export default class KansasCityChiefs extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[15], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[15], loading: false});
+  })
 }
+
 
   render(){
     return (

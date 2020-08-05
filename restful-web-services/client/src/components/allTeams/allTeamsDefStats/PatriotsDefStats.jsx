@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios'
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -16,16 +17,22 @@ export default class PatriotsDefStats extends React.Component {
     
   }
 
+// async componentDidMount(){
+//   const url = "http://localhost:8080/patriotsDefStats";
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   console.log(data);
+//   this.setState({ team: data, loading: false});
+// }
+
 async componentDidMount(){
   const url = "http://localhost:8080/patriotsDefStats";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data, loading: false});
 
-  
-
-  this.setState({ team: data, loading: false});
-
+  })
 
 }
 

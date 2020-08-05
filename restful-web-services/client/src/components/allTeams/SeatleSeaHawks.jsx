@@ -2,9 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import SeaHawksDefStats from "./allTeamsDefStats/SeaHawksDefStats";
 import SeaHawksOffStats from "./allTeamsOffStats/SeaHawksOffStats";
-// import logo from './logo.svg';
-// import './App.css';
-
+import axios from 'axios';
 export default class SeatleSeaHawks extends React.Component {
 
   state = {
@@ -15,16 +13,13 @@ export default class SeatleSeaHawks extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[27], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[27], loading: false});
+  })
 }
+
 
   render(){
     return (

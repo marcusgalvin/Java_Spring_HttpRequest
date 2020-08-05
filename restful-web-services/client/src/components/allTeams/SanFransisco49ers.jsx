@@ -2,8 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import SanFranDefStats from "./allTeamsDefStats/SanFranDefStats";
 import SanFranOffStats from "./allTeamsOffStats/SanFranOffStats";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
 
 export default class SanFransisco49ers extends React.Component {
 
@@ -15,16 +14,14 @@ export default class SanFransisco49ers extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[28], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[28], loading: false});
+  })
 }
+
+
 
   render(){
     return (

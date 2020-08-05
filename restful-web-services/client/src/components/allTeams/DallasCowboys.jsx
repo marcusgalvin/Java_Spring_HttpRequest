@@ -2,8 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import CowboysDefStats from "./allTeamsDefStats/CowboysDefStats";
 import CowboysOffStats from "./allTeamsOffStats/CowboysOffStats";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
 
 export default class ArizonaCardinals extends React.Component {
 
@@ -15,16 +14,13 @@ export default class ArizonaCardinals extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[8], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[8], loading: false});
+  })
 }
+
 
   render(){
     return (

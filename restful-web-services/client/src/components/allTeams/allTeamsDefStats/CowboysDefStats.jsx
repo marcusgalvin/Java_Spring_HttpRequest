@@ -1,7 +1,5 @@
 import React from "react";
-// import logo from './logo.svg';
-// import './App.css';
-
+import axios from 'axios';
 
 import {
   Card, CardImg, CardText, CardBody,
@@ -15,19 +13,17 @@ export default class CowboysDefStats extends React.Component {
     team : null
     
   }
-
 async componentDidMount(){
   const url = "http://localhost:8080/allTeamsDefStats";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[8], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[8], loading: false});
+  })
 }
+
+
+
 
   render(){
     return (

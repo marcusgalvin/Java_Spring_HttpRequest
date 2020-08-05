@@ -1,6 +1,6 @@
 import React from "react";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
+
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -13,15 +13,15 @@ export default class CardinalsOffStats extends React.Component {
     team : null
     
   }
-
 async componentDidMount(){
   const url = "http://localhost:8080/allTeamsOffStats";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  this.setState({ team: data[0], loading: false});
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[0], loading: false});
+  })
 }
+
 
   render(){
     return (

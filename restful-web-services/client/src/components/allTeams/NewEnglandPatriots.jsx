@@ -4,6 +4,7 @@ import React from "react";
 import PatriotsNews from "./TeamNews/PatriotsNews";
 import PatriotsDefStats from "./allTeamsDefStats/PatriotsDefStats";
 import PatriotsOffStats from "./allTeamsOffStats/PatriotsOffStats";
+import axios from "axios";
 
 export default class NewEnglandPatriots extends React.Component {
 
@@ -13,15 +14,15 @@ export default class NewEnglandPatriots extends React.Component {
     
   }
 
+
+  
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  this.setState({ team: data[21], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[21], loading: false});
+  })
 }
 
   render(){

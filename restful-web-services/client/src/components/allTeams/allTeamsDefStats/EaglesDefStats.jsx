@@ -1,6 +1,5 @@
 import React from "react";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
 
 
 import {
@@ -18,16 +17,14 @@ export default class EaglesDefStats extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/allTeamsDefStats";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[25], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[25], loading: false});
+  })
 }
+
+
 
   render(){
     return (

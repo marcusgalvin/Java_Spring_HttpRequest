@@ -2,8 +2,7 @@ import React from "react";
 import CardinalsNews from "./TeamNews/CardinalsNews";
 import RavensDefStats from "./allTeamsDefStats/RavensDefStats";
 import RavensOffStats from "./allTeamsOffStats/RavensOffStats";
-// import logo from './logo.svg';
-// import './App.css';
+import axios from 'axios';
 
 export default class BaltimoreRavens extends React.Component {
 
@@ -15,16 +14,14 @@ export default class BaltimoreRavens extends React.Component {
 
 async componentDidMount(){
   const url = "http://localhost:8080/teams";
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-
-  
-
-  this.setState({ team: data[2], loading: false});
-
-
+  axios.get(url).then(res => {
+    const data = res.data;
+    // console.log(data)
+      this.setState({ team: data[2], loading: false});
+  })
 }
+
+
 
   render(){
     return (
