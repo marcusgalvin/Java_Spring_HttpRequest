@@ -14,34 +14,17 @@ import PhiladelphiaEagles from "./PhiladelphiaEagles";
 import SeatleSeaHawks from "./SeatleSeaHawks";
 import KansasCityChiefs from "./KansasCityChiefs"
 
-// import Login from "./components/allTeams/Login";
-
-// import PlayerCompare from "./components/allPlayers/PlayerCompare";
-// import TodoApp from "./components/todo/TodoApp";
-
-// import logo from './logo.svg';
-// import './App.css';
 
 export default class App extends React.Component {
 
-  
-
   render(){
     return (
-      <Router>
-    
 
-	
+      // <> 
+      // <h1>Select A Team</h1>
+      // <>
+      <Router>	
         <div className="teamIcons">
-
-
-			{/* <div className="Login">
-          <Link to="/Login">
-            <button className="loginButton">
-            </button>
-            </Link>
-        </div> */}
-
          
 {/* falcons       */}
         <div className="AtlantaFalcons">

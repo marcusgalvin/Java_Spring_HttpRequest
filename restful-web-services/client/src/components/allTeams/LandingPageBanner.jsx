@@ -71,9 +71,9 @@ constructor(props) {
 
 
 		<div className="pictureOverlay">
-			<p>Discover NFL</p>
+			{/* <p>Discover NFL</p>
 			<h5>Stats, Ranks, News & More</h5>
-			
+			 */}
 			
 		</div>
 		
