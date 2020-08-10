@@ -6,6 +6,8 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import { Col, Row,  Form, FormGroup, Label, Input } from 'reactstrap';
+ import { Formik } from 'formik';
+
 
 
 
@@ -74,6 +76,9 @@ signUpButtonClicked() {
     <br/>
     <br/>
 
+    {this.state.showSuccessMessage && <div>Signed Up!</div>}
+    {this.state.hasRegistrationFailed && <div className="alert alert-warning">Sign up failed</div>}           
+
 
      <Form>
       <Row form>
@@ -116,7 +121,7 @@ signUpButtonClicked() {
         </Col>
       </Row>
       
-      <Button>Sign in</Button>
+      <Button onClick={this.signUpButtonClicked}>Sign in</Button>
     </Form>
     </div>
      
