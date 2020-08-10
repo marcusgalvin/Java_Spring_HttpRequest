@@ -330,6 +330,13 @@ align-items: center;
 color:white
 }
 
-
+.signUp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:auto;
+  /* flex-direction: center; */
+  width: 800px;
+}
 
 

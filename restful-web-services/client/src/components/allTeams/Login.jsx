@@ -2,10 +2,14 @@ import React, {Component} from 'react'
 import{BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import AuthenticationService from '../../AuthenticationService.js'
 import SignUp from './SignUp';
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
 
 
-import { Button } from 'reactstrap';
+
 
 class Login extends Component{
 
@@ -73,13 +77,10 @@ loginClicked(){
     </div>
     <br />
     <div className="test">
-          {/* <Link to="/SignUp">
-            <Button  color="success" className="btn">Sign Up</Button>
-            </Link> */}
-        
       <Button color="primary">
         <Link className="buttonTest" to="/SignUp">Sign Up</Link>
         </Button>
+
 
 
 

@@ -9,7 +9,8 @@ import BuffaloBills from "./components/allTeams/BuffaloBills";
 import NewEnglandPatriots from "./components/allTeams/NewEnglandPatriots";
 
 import Login from "./components/allTeams/Login";
-import Logout from "./components/allTeams/Logout"
+import Logout from "./components/allTeams/Logout";
+import SignUp from "./components/allTeams/SignUp";
 
 import PlayerCompare from "./components/allPlayers/PlayerCompare";
 import TodoApp from "./components/todo/TodoApp";
@@ -43,6 +44,8 @@ export default class App extends React.Component {
           <Route path="/logout" component={Logout}/>
           <Route path="/playerCompare" component={PlayerCompare}/>
           <Route path="/welcome" component={WelcomeComponent}/>
+          <Route path="/SignUp" component={SignUp}/>
+
           <Route  path="/teamClickIcons/:name" component={TeamClickIcons}/>
           <Route path="" component={ErrorComponent}/>
       </Switch>
