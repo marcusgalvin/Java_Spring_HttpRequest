@@ -73,7 +73,15 @@ loginClicked(){
     </div>
     <br />
     <div className="test">
-          <Link to="/SignUp"><Button  color="success" className="btn">Sign Up</Button></Link>
+          {/* <Link to="/SignUp">
+            <Button  color="success" className="btn">Sign Up</Button>
+            </Link> */}
+        
+      <Button color="primary">
+        <Link className="buttonTest" to="/SignUp">Sign Up</Link>
+        </Button>
+
+
 
     </div>
       </div>
