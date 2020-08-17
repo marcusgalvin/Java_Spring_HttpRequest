@@ -5,9 +5,12 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import { Col, Row,  Form, FormGroup, Label, Input } from 'reactstrap';
- import { Formik } from 'formik';
+import { Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
+//  import { Formik, Form, Field, ErrorMessage } from 'formik'
+import SignUpTest from './SignUpTest';
 
+import {Formik} from 'formik';
+import * as Yup from 'yup';
 
 
 
@@ -15,6 +18,10 @@ import { Col, Row,  Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 class SignUp extends Component{
+
+
+
+  
 
 constructor(props){
   super(props)
@@ -70,63 +77,21 @@ signUpButtonClicked() {
      
    
   <div className ="signUp">
-    <h1>Create your Free Account</h1>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 
-    {this.state.showSuccessMessage && <div>Signed Up!</div>}
-    {this.state.hasRegistrationFailed && <div className="alert alert-warning">Sign up failed</div>}           
-
-
-     <Form>
-      <Row form>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="username">Username</Label>
-            <Input type="username" name="username" id="username" placeholder="" />
-          </FormGroup>
-        </Col>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="password">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="" />
-          </FormGroup>
-        </Col>
-      </Row>
-      <FormGroup>
-        <Label for="email">Email Address</Label>
-        <Input type="text" name="email" id="email" placeholder=""/>
-      </FormGroup>
-      
-      <Row form>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="city">City</Label>
-            <Input type="text" name="city" id="city"/>
-          </FormGroup>
-        </Col>
-        <Col md={4}>
-          <FormGroup>
-            <Label for="state">State</Label>
-            <Input type="text" name="state" id="state"/>
-          </FormGroup>
-        </Col>
-        <Col md={2}>
-          <FormGroup>
-            <Label for="zip">Zip</Label>
-            <Input type="text" name="zip" id="zip"/>
-          </FormGroup>  
-        </Col>
-      </Row>
-      
-      <Button onClick={this.signUpButtonClicked}>Sign in</Button>
-    </Form>
-    </div>
+    
+       <SignUpTest/>
      
+
+
+
+   </div>
+   
+    
+
      
-    )    
+    ) 
+     
+      
   }
 
   

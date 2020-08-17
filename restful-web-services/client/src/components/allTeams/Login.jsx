@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import{BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import AuthenticationService from '../../AuthenticationService.js'
 import SignUp from './SignUp';
+import SignUpTest from './SignUpTest';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
