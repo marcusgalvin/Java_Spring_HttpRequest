@@ -21,6 +21,10 @@ class AuthenticationService {
 	}
 
 
+	 registerUser(user){
+        console.log("post request")
+        return axios.post(`${'http://localhost:8080'}/register`, user)
+    }
 
 
 	

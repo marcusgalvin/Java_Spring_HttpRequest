@@ -19,12 +19,9 @@ import * as Yup from 'yup';
 
 class SignUp extends Component{
 
-
-
-  
-
 constructor(props){
   super(props)
+  
   this.state={
     username: "",
     password: '',
@@ -32,10 +29,11 @@ constructor(props){
     city: "",
     state: "",
     zip: "",
-    hasSignUpFailed: false,
+    hasRegistrationFailed: false,
     showSuccessMessage: false
   }
-  console.log(this.state);
+  this.handleChange = this.handleChange.bind(this)
+  // this.registerClicked = this.registerClicked.bind(this)
 }
 
  handleChange(event) {
@@ -47,7 +45,7 @@ constructor(props){
   }
 
 
-signUpButtonClicked() {
+registerButtonClicked() {
 
         var user = {
             username: this.state.username,
@@ -60,13 +58,13 @@ signUpButtonClicked() {
         console.log("signed up")
         console.log(user)
 
-        // try {
-        //     UserDataService.registerUser(user)
-        //         .then(() => this.props.history.push('/login'))
-        // } catch (error) {
-        //     this.setState({showSuccessMessage:false})
-        //     this.setState({hasRegistrationFailed:true})
-        // }
+        try {
+            AuthenticationService.registerUser(user)
+                .then(() => this.props.history.push('/login'))
+        } catch (error) {
+            this.setState({showSuccessMessage:false})
+            this.setState({hasRegistrationFailed:true})
+        }
     }  
 
 

@@ -2,13 +2,24 @@ import React from 'react';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import { Col, Row, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import Login from './Login';
 
 //constants
 const addressRegex = /^[a-zA-Z0-9][a-zA-Z0-9 .,-]*$/;
 const currentDate = new Date();
 
 
+
+
+
+
+
+
 const SignUpTest = () => (
+
+
+	
+	
 
 
 <Formik
@@ -143,7 +154,7 @@ validationSchema = {Yup.object().shape({
 
 		
 
-		<Button className="createAcc" type="submit" disabled={isSubmitting}>Sign up</Button>
+		<Button className="createAcc" type="submit" disabled={isSubmitting} >Sign up</Button>
 		</form>
 
 

@@ -3,6 +3,7 @@ import React from "react";
 // import './App.css';
 import { Table } from 'reactstrap';
 import LoadingSpinner from "./LoadingSpinner"
+import axios from 'axios';
 
 
 export default class playerCompare extends React.Component {
@@ -14,6 +15,15 @@ export default class playerCompare extends React.Component {
     
     
   }
+
+// async componentDidMount(){
+//   const url = "http://localhost:8080/allTeamsDefStats";
+//   axios.get(url).then(res => {
+//     const data = res.data;
+//     // console.log(data)
+//       this.setState({ team: data, loading: false});
+//   })
+// }
 
 
 async componentDidMount(){
