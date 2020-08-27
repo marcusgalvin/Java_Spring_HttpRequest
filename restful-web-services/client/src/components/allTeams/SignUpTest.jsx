@@ -3,10 +3,12 @@ import {Formik} from 'formik';
 import * as Yup from 'yup';
 import { Col, Row, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import Login from './Login';
+import AuthenticationService from './AuthenticationService';
+import SignUp from './SignUp';
 
 //constants
 const addressRegex = /^[a-zA-Z0-9][a-zA-Z0-9 .,-]*$/;
-const currentDate = new Date();
+// const currentDate = new Date();
 
 
 
@@ -26,7 +28,7 @@ const SignUpTest = () => (
 initialValues={{email:"", password:""}}
 onSubmit={(values, { setSubmitting }) => {
 	setTimeout(()=> {
-		console.log("logging in", values)
+		console.log("register/logging in", values)
 	}, 500);
 }}
 
@@ -97,7 +99,7 @@ validationSchema = {Yup.object().shape({
           <FormGroup>
 			  {/* email */}
             <Label for="password">Password</Label>
-            <Input type="text" value={values.password} name="password"  onChange={handleChange} onBlur={handleBlur} className={errors.password && touched.password && "error"} />
+            <Input type="password" value={values.password} name="password"  onChange={handleChange} onBlur={handleBlur} className={errors.password && touched.password && "error"} />
 
 			{errors.password && touched.password && (
 			<div className="input-feedback">{errors.password}</div>
@@ -154,7 +156,7 @@ validationSchema = {Yup.object().shape({
 
 		
 
-		<Button className="createAcc" type="submit" disabled={isSubmitting} >Sign up</Button>
+		<Button className="createAcc" type="submit" disabled={isSubmitting}  >Sign up</Button>
 		</form>
 
 
