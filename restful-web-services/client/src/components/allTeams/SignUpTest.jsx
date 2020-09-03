@@ -9,6 +9,7 @@ import SignUp from './SignUp';
 //constants
 const addressRegex = /^[a-zA-Z0-9][a-zA-Z0-9 .,-]*$/;
 // const currentDate = new Date();
+let newDate = 0;
 
 
 
