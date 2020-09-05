@@ -10,6 +10,7 @@ import SignUp from './SignUp';
 const addressRegex = /^[a-zA-Z0-9][a-zA-Z0-9 .,-]*$/;
 // const currentDate = new Date();
 let newDate = 0;
+let next = 0;
 
 
 
