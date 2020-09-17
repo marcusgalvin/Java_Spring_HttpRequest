@@ -23,8 +23,16 @@ export default class App extends React.Component {
       // <> 
       // <h1>Select A Team</h1>
       // <>
-      <Router>	
+      <Router>
+        <div className="division">
+            <img src ="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/afc.png&h=100&w=100"></img>
+            <h1 className="division">AFC</h1>
+            <img src ="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/afc.png&h=100&w=100"></img>
+
+            
+          </div>	
         <div className="teamIcons">
+          
          
 {/* falcons       */}
         <div className="AtlantaFalcons">
@@ -33,6 +41,8 @@ export default class App extends React.Component {
             </button>
             </Link>
         </div>
+
+
 
         <br />
         <div className="break"></div>
@@ -80,6 +90,16 @@ export default class App extends React.Component {
           </Link>
         </div>
     	<div className="break"></div>
+
+</div>
+<div className="division">
+  <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nfc.png&h=100&w=100"></img>
+  <h1 className="division">NFC</h1>
+    <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nfc.png&h=100&w=100"></img>
+
+</div>
+<div className="teamIcons">
+
 {/* lions */}
       <div className="teamIconRowTwo">
 

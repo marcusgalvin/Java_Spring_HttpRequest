@@ -32,6 +32,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency> 
+		
+	<!-- For Java 8 Date/Time Support -->
+<dependency>
+    <groupId>com.fasterxml.jackson.datatype</groupId>
+    <artifactId>jackson-datatype-jsr310</artifactId>
+</dependency>	
 		 
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -40,6 +46,17 @@
 		</dependency> 
 		
 		
+		<dependency> 
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.el</artifactId>
+        <version>3.0.0</version>
+     </dependency>
+     
+ <dependency> 
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>6.0.13.Final</version>
+    </dependency> 
 		
 		
 		<dependency>

@@ -236,6 +236,18 @@
   display: flex;
 flex-wrap: wrap;
   align-content: space-around;
+  justify-content: center;
+  margin-bottom: 10px;
+  /* margin: 100px; */
+
+}
+
+.division{
+  display: flex;
+flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  margin-bottom: 10px;
   /* margin: 100px; */
 
 }
@@ -358,4 +370,20 @@ color:white
   text-align: center;
 }
 
+
+.afc{
+  display: flex;
+flex-wrap: wrap;
+  align-content: space-around;
+  /* margin: 100px; */
+
+}
+
+.nfc{
+  display: flex;
+flex-wrap: wrap;
+  align-content: space-around;
+  /* margin: 100px; */
+
+}
 

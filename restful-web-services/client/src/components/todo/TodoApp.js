@@ -7,6 +7,7 @@ class TodoApp extends Component {
 		return(
 			<div className="TodoApp">
 				My todo applicationnn
+				<h1>check</h1>
 			</div>
 		)
 	}
